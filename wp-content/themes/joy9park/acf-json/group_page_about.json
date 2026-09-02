@@ -1,0 +1,444 @@
+{
+    "key": "group_page_about",
+    "title": "Page — About",
+    "fields": [
+        {
+            "key": "field_tab_about_intro",
+            "label": "Intro",
+            "name": "tab_about_intro",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_about_intro_heading",
+            "label": "Heading",
+            "name": "about_intro_heading",
+            "type": "textarea",
+            "rows": 2,
+            "new_lines": "br",
+            "default_value": "Parking Made Easy, Travel \nMade Better"
+        },
+        {
+            "key": "field_about_intro_text_1",
+            "label": "Paragraph 1",
+            "name": "about_intro_text_1",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Travel is stressful enough without worrying about where to leave your car. That's why Joy9 Park exists — to give travellers a safe, affordable place to park just minutes from JFK."
+        },
+        {
+            "key": "field_about_intro_text_2",
+            "label": "Paragraph 2",
+            "name": "about_intro_text_2",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "Our secure parking lot in Jamaica, NY has been serving airport travellers for years with round-the-clock access, barrier-controlled entry and a free shuttle that runs to every terminal. Whether you're away for a weekend or a month, your vehicle stays protected until the moment you return."
+        },
+        {
+            "key": "field_about_intro_image",
+            "label": "Image",
+            "name": "about_intro_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+
+        {
+            "key": "field_tab_about_founder",
+            "label": "Founder",
+            "name": "tab_about_founder",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_founder_image",
+            "label": "Image",
+            "name": "founder_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_founder_heading",
+            "label": "Heading",
+            "name": "founder_heading",
+            "type": "text",
+            "default_value": "Our Founder"
+        },
+        {
+            "key": "field_founder_name",
+            "label": "Founder Name",
+            "name": "founder_name",
+            "type": "text",
+            "default_value": "Founder Name"
+        },
+        {
+            "key": "field_founder_role",
+            "label": "Founder Role",
+            "name": "founder_role",
+            "type": "text",
+            "default_value": "Founder & CEO"
+        },
+        {
+            "key": "field_founder_text",
+            "label": "Bio",
+            "name": "founder_text",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "Built on a simple idea: that airport parking should be easy, fair and genuinely secure. After years of watching travellers struggle with overpriced lots and unreliable shuttles, our founder set out to build something better — a facility where the price you are quoted is the price you pay, and where every customer is treated like a neighbour rather than a booking reference."
+        },
+
+        {
+            "key": "field_tab_about_offer",
+            "label": "What We Offer",
+            "name": "tab_about_offer",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_offer_heading",
+            "label": "Heading",
+            "name": "offer_heading",
+            "type": "text",
+            "default_value": "What We Offer"
+        },
+        {
+            "key": "field_offer_subtext",
+            "label": "Subtext",
+            "name": "offer_subtext",
+            "type": "text",
+            "default_value": "Everything you need for a stress-free trip"
+        },
+        {
+            "key": "field_offer_cards",
+            "label": "Cards",
+            "name": "offer_cards",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_offer_card_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_offer_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_offer_card_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ],
+            "default_value": [
+                { "title": "Secure Long Term Parking", "text": "Barrier-controlled entry, 24/7 monitoring and a fully fenced lot keep your vehicle safe for as long as you're away." },
+                { "title": "Free JFK Shuttle Service", "text": "Complimentary shuttles run around the clock to and from all six JFK terminals in just 5 to 7 minutes." },
+                { "title": "Affordable Daily Rates", "text": "Transparent pricing from $15 a day with no hidden fees and no credit card needed to check availability." },
+                { "title": "Easy Reservations", "text": "Book your spot online in a few clicks, or simply call us and pay by cash or Zelle when you arrive." }
+            ]
+        },
+
+        {
+            "key": "field_tab_about_fss",
+            "label": "Free Shuttle Service",
+            "name": "tab_about_fss",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_about_fss_bg_image",
+            "label": "Background Image",
+            "name": "about_fss_bg_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_about_fss_badge_text",
+            "label": "Badge Text",
+            "name": "about_fss_badge_text",
+            "type": "text",
+            "default_value": "Free Shuttle Service"
+        },
+        {
+            "key": "field_about_fss_title",
+            "label": "Title",
+            "name": "about_fss_title",
+            "type": "textarea",
+            "rows": 2,
+            "new_lines": "br",
+            "default_value": "Ride to the Terminal \nin Minutes"
+        },
+        {
+            "key": "field_about_fss_text",
+            "label": "Text",
+            "name": "about_fss_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "Our complimentary shuttle service runs 24/7 between our secure lot and all JFK terminals. No waiting, no hassle—just hop on and we'll have you at your terminal in minutes."
+        },
+        {
+            "key": "field_about_fss_features",
+            "label": "Features",
+            "name": "about_fss_features",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Feature",
+            "sub_fields": [
+                {
+                    "key": "field_about_fss_feature_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_fss_feature_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                }
+            ],
+            "default_value": [
+                { "title": "All JFK Terminals Covered", "text": "We serve all 6 JFK terminals including T1, T2, T4, T5, T7 and T8" },
+                { "title": "24/7 Availability", "text": "Early morning flight or late night arrival? We're always here" },
+                { "title": "Luggage Friendly", "text": "Spacious vehicles accommodate all your luggage and travel gear" }
+            ]
+        },
+        {
+            "key": "field_about_fss_learn_more_text",
+            "label": "Learn More Button Text",
+            "name": "about_fss_learn_more_text",
+            "type": "text",
+            "instructions": "Links to the Why Choose Us section on the home page.",
+            "default_value": "Learn More About Shuttle"
+        },
+        {
+            "key": "field_about_fss_logo_primary",
+            "label": "Right Logo (Primary)",
+            "name": "about_fss_logo_primary",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_about_fss_logo_secondary",
+            "label": "Right Logo (Secondary / Hover)",
+            "name": "about_fss_logo_secondary",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_about_fss_book_now_text",
+            "label": "Book Now Button Text",
+            "name": "about_fss_book_now_text",
+            "type": "text",
+            "instructions": "Links to whichever page uses the Reserve a Spot template.",
+            "default_value": "Book Now"
+        },
+
+        {
+            "key": "field_tab_about_how",
+            "label": "How It Works",
+            "name": "tab_about_how",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_how_heading",
+            "label": "Heading",
+            "name": "how_heading",
+            "type": "text",
+            "default_value": "How It Works"
+        },
+        {
+            "key": "field_how_text",
+            "label": "Text",
+            "name": "how_text",
+            "type": "textarea",
+            "rows": 3,
+            "default_value": "From the moment you book to the moment you drive away, the whole process takes just four simple steps. No paperwork queues, no shuttle waiting around and no surprises when you come back to collect your car."
+        },
+        {
+            "key": "field_how_image",
+            "label": "Illustration",
+            "name": "how_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_how_steps",
+            "label": "Steps",
+            "name": "how_steps",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Step",
+            "sub_fields": [
+                {
+                    "key": "field_how_step_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_how_step_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_how_step_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ],
+            "default_value": [
+                { "title": "Step 01. Reserve", "text": "Book online or call ahead to secure your parking spot for the dates you need." },
+                { "title": "Step 02. Arrive", "text": "Drive straight to our lot, check in at the gate and hand over your keys." },
+                { "title": "Step 03. Shuttle", "text": "Hop on our free shuttle and we'll have you at your terminal in 5 to 7 minutes." },
+                { "title": "Step 04. Return", "text": "Call us once you land and the shuttle will collect you and bring you back to your car." }
+            ]
+        },
+
+        {
+            "key": "field_tab_about_mission",
+            "label": "Mission",
+            "name": "tab_about_mission",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mission_image",
+            "label": "Image",
+            "name": "mission_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_mission_heading",
+            "label": "Heading",
+            "name": "mission_heading",
+            "type": "text",
+            "default_value": "Our Mission"
+        },
+        {
+            "key": "field_mission_text_1",
+            "label": "Paragraph 1",
+            "name": "mission_text_1",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "To make airport parking near JFK genuinely simple — built on three things: convenience, security and honest pricing."
+        },
+        {
+            "key": "field_mission_text_2",
+            "label": "Paragraph 2",
+            "name": "mission_text_2",
+            "type": "textarea",
+            "rows": 4,
+            "default_value": "We believe travellers shouldn't have to worry about their car while they're away. That's why we invest in a secure, well-lit facility, keep our shuttle running 24/7 and quote every rate up front. No hidden charges, no long walks with luggage, and no wondering whether your vehicle will be there when you get back."
+        },
+
+        {
+            "key": "field_tab_about_contact",
+            "label": "Contact & Directions",
+            "name": "tab_about_contact",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_about_contact_eyebrow",
+            "label": "Eyebrow",
+            "name": "about_contact_eyebrow",
+            "type": "text",
+            "default_value": "Easy to Find"
+        },
+        {
+            "key": "field_about_contact_title",
+            "label": "Title",
+            "name": "about_contact_title",
+            "type": "text",
+            "default_value": "Conveniently Located Near JFK"
+        },
+        {
+            "key": "field_about_contact_text",
+            "label": "Text",
+            "name": "about_contact_text",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Our facility is just 3 miles from JFK Airport, making it the perfect choice for travelers seeking quick and easy parking."
+        },
+        {
+            "key": "field_about_contact_address_title",
+            "label": "Address Card Title",
+            "name": "about_contact_address_title",
+            "type": "text",
+            "default_value": "Address"
+        },
+        {
+            "key": "field_about_direction_steps",
+            "label": "Direction Steps",
+            "name": "about_direction_steps",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Step",
+            "sub_fields": [
+                {
+                    "key": "field_about_direction_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_direction_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                }
+            ],
+            "default_value": [
+                { "title": "From Belt Parkway", "text": "Exit at Springfield Blvd, head north to 155th Street" },
+                { "title": "From Nassau Expressway", "text": "Turn onto 155th Street, we're on the left" }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/about.php"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "All sections of the About page in one tabbed field group. Address and map URL use Global Site Settings.",
+    "show_in_rest": 0
+}

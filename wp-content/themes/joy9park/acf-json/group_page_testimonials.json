@@ -1,0 +1,139 @@
+{
+    "key": "group_page_testimonials",
+    "title": "Page — Testimonials",
+    "fields": [
+        {
+            "key": "field_tab_testimonials_slider",
+            "label": "Testimonials Slider",
+            "name": "tab_testimonials_slider",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_testimonials",
+            "label": "Testimonials",
+            "name": "testimonials",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Testimonial",
+            "sub_fields": [
+                {
+                    "key": "field_testimonial_photo",
+                    "label": "Photo",
+                    "name": "photo",
+                    "type": "image",
+                    "return_format": "url",
+                    "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_testimonial_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_testimonial_location",
+                    "label": "Location",
+                    "name": "location",
+                    "type": "text"
+                },
+                {
+                    "key": "field_testimonial_rating",
+                    "label": "Rating (1-5)",
+                    "name": "rating",
+                    "type": "number",
+                    "min": 1,
+                    "max": 5,
+                    "default_value": 5
+                },
+                {
+                    "key": "field_testimonial_text",
+                    "label": "Testimonial Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ],
+            "default_value": [
+                { "name": "Sarah Johnson", "location": "Brooklyn, NY", "rating": 5, "text": "The team delivered an excellent website with a modern design and smooth user experience. Communication was clear and the results exceeded our expectations." },
+                { "name": "Michael Davis", "location": "Queens, NY", "rating": 5, "text": "The team delivered an excellent website with a modern design and smooth user experience. Communication was clear and the results exceeded our expectations." },
+                { "name": "Emily Wilson", "location": "Long Island, NY", "rating": 5, "text": "The team delivered an excellent website with a modern design and smooth user experience. Communication was clear and the results exceeded our expectations." },
+                { "name": "David Martinez", "location": "Bronx, NY", "rating": 5, "text": "The team delivered an excellent website with a modern design and smooth user experience. Communication was clear and the results exceeded our expectations." },
+                { "name": "Jessica Brown", "location": "Manhattan, NY", "rating": 5, "text": "The team delivered an excellent website with a modern design and smooth user experience. Communication was clear and the results exceeded our expectations." }
+            ]
+        },
+        {
+            "key": "field_testimonials_show_more_text",
+            "label": "“Show More” Button Text",
+            "name": "testimonials_show_more_text",
+            "type": "text",
+            "instructions": "Links to whichever page uses the Testimonial List template.",
+            "default_value": "Show More"
+        },
+
+        {
+            "key": "field_tab_testimonials_faq",
+            "label": "FAQ",
+            "name": "tab_testimonials_faq",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_faq_heading",
+            "label": "Heading",
+            "name": "faq_heading",
+            "type": "text",
+            "default_value": "Frequently Asked Questions"
+        },
+        {
+            "key": "field_faq_items",
+            "label": "FAQ Items",
+            "name": "faq_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add FAQ",
+            "sub_fields": [
+                {
+                    "key": "field_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "text"
+                },
+                {
+                    "key": "field_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ],
+            "default_value": [
+                { "question": "How do I book a parking spot?", "answer": "You can reserve your parking space online by selecting your parking dates, entering your details, and completing the booking process." },
+                { "question": "Is the shuttle service to JFK Airport free?", "answer": "Yes. Our shuttle service is completely complimentary for all customers and runs 24/7 between our lot and every JFK terminal." },
+                { "question": "How early should I arrive at the parking facility?", "answer": "We recommend arriving at least 30 minutes before you need to be at the terminal. The shuttle ride takes only 5 to 7 minutes." },
+                { "question": "Is my car safe while I'm traveling?", "answer": "Absolutely. Our lot is barrier-controlled with 24/7 security monitoring, so your vehicle stays secure for the whole trip." },
+                { "question": "How do I get picked up after returning from JFK?", "answer": "Simply call us once you have collected your luggage and our shuttle will meet you at the terminal pickup area within minutes." }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/testimonial.php"
+            }
+        ]
+    ],
+    "menu_order": 13,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Testimonials slider and FAQ accordion.",
+    "show_in_rest": 0
+}

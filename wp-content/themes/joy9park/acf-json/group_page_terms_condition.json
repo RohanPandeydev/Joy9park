@@ -1,0 +1,178 @@
+{
+    "key": "group_page_terms_condition",
+    "title": "Page — Terms & Conditions",
+    "fields": [
+        {
+            "key": "field_tab_terms_overview",
+            "label": "Overview",
+            "name": "tab_terms_overview",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_terms_eyebrow",
+            "label": "Eyebrow",
+            "name": "terms_eyebrow",
+            "type": "text",
+            "default_value": "Parking Made Clear"
+        },
+        {
+            "key": "field_terms_heading",
+            "label": "Heading",
+            "name": "terms_heading",
+            "type": "text",
+            "default_value": "Simple Terms For Your Joy9 Park Reservation"
+        },
+        {
+            "key": "field_terms_description",
+            "label": "Description",
+            "name": "terms_description",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Please review these short terms before booking or parking with us."
+        },
+        {
+            "key": "field_terms_highlight_label",
+            "label": "Highlight Label",
+            "name": "terms_highlight_label",
+            "type": "text",
+            "default_value": "Joy9 Park Terms"
+        },
+        {
+            "key": "field_terms_highlight_heading",
+            "label": "Highlight Heading",
+            "name": "terms_highlight_heading",
+            "type": "text",
+            "default_value": "Reserve, arrive, shuttle and travel with confidence."
+        },
+        {
+            "key": "field_terms_highlight_text",
+            "label": "Highlight Text",
+            "name": "terms_highlight_text",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "By using Joy9 Park, you agree to provide accurate booking details, follow lot instructions and contact us if your travel plans change."
+        },
+        {
+            "key": "field_terms_highlight_button_text",
+            "label": "Highlight Button Text",
+            "name": "terms_highlight_button_text",
+            "type": "text",
+            "instructions": "Links to whichever page uses the Reserve a Spot template.",
+            "default_value": "Reserve Your Spot"
+        },
+
+        {
+            "key": "field_tab_terms_list",
+            "label": "Terms List",
+            "name": "tab_terms_list",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_terms_items",
+            "label": "Terms Items",
+            "name": "terms_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_terms_item_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "choices": {
+                        "calendar": "Calendar",
+                        "payment": "Payment Card",
+                        "shuttle": "Shuttle",
+                        "car": "Car",
+                        "rotate": "Rotate / Changes",
+                        "shield": "Shield",
+                        "info": "Info"
+                    },
+                    "default_value": "calendar",
+                    "ui": 0
+                },
+                {
+                    "key": "field_terms_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_terms_item_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ],
+            "default_value": [
+                { "icon": "calendar", "title": "Booking Details", "text": "Customers are responsible for entering correct contact, vehicle and travel dates." },
+                { "icon": "payment", "title": "Payments", "text": "Parking fees are due as quoted. Accepted payment options may include cash or Zelle." },
+                { "icon": "shuttle", "title": "Shuttle Service", "text": "Free shuttle service is provided for parking customers and depends on traffic, demand and airport conditions." },
+                { "icon": "car", "title": "Vehicle Responsibility", "text": "Please remove valuables and lock your vehicle. Joy9 Park is not responsible for items left inside." },
+                { "icon": "rotate", "title": "Changes Or Cancellations", "text": "Contact us as soon as possible if your arrival, return time or reservation needs to change." }
+            ]
+        },
+
+        {
+            "key": "field_tab_terms_sidebar",
+            "label": "Sidebar",
+            "name": "tab_terms_sidebar",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_terms_sidebar_heading",
+            "label": "Heading",
+            "name": "terms_sidebar_heading",
+            "type": "text",
+            "default_value": "Need Help?"
+        },
+        {
+            "key": "field_terms_sidebar_text",
+            "label": "Text",
+            "name": "terms_sidebar_text",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Questions about parking terms, pickup or payment? Our team is ready to help."
+        },
+        {
+            "key": "field_terms_sidebar_phone",
+            "label": "Phone (display)",
+            "name": "terms_sidebar_phone",
+            "type": "text",
+            "default_value": "+1 (516) 849-3413"
+        },
+        {
+            "key": "field_terms_sidebar_email",
+            "label": "Email",
+            "name": "terms_sidebar_email",
+            "type": "email",
+            "default_value": "info@joy9park.com"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/terms-condition.php"
+            }
+        ]
+    ],
+    "menu_order": 16,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Terms & Conditions overview, highlight card, terms list and sidebar.",
+    "show_in_rest": 0
+}

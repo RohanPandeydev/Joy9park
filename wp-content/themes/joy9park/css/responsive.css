@@ -1,0 +1,1542 @@
+/* ==========================================================================
+   Joy9 Park — Responsive Stylesheet
+   Breakpoints follow Bootstrap 5: 1399 / 1199 / 991 / 767 / 575 / 479
+   ========================================================================== */
+
+
+/* ========================= Max 1399px ========================= */
+@media only screen and (max-width: 1399px) {
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-logo img {
+        height: 70px;
+    }
+
+    .hero-row {
+        min-height: 600px;
+    }
+}
+
+/* ========================= Max 1199px ========================= */
+@media only screen and (max-width: 1199px) {
+
+    .container {
+        max-width: 960px;
+    }
+
+    .main-menu .nav-link {
+        font-size: 15px;
+        padding: 8px 11px;
+    }
+
+    .header-btn-wrap {
+        margin-left: 14px;
+    }
+
+    .header-btn-wrap .common-btn {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    .header-logo {
+        gap: 8px;
+    }
+
+    .header-logo .logo-primary,
+    .header-logo .logo-secondary {
+        height: 75px;
+    }
+
+    /* .header-logo .logo-secondary {
+        height: 40px;
+    } */
+
+    /* Form stays inside the grid from here down */
+    .hero-form-wrapper {
+        margin-right: 0;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .booking-form-box {
+        padding: 26px 22px;
+    }
+
+    .shuttle-logo img {
+        margin-left: 0px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .contact-info {
+        padding-left: 12px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .contact-map iframe {
+        height: 400px;
+    }
+
+    .contact-abs-logo {
+        right: 25px;
+        bottom: 30px;
+    }
+
+    .contact-abs-logo img {
+        height: 90px;
+    }
+
+    .footer-logo .footer-logo-primary,
+    .footer-logo .footer-logo-secondary {
+        height: 80px;
+    }
+
+    /* .footer-logo .footer-logo-secondary {
+        height: 38px;
+    } */
+
+    .ready-park-title {
+        font-size: 27px;
+    }
+
+    .ads-bnr-title {
+        font-size: 30px;
+    }
+
+    .ads-bnr-section {
+        min-height: 460px;
+    }
+
+    .section-main-title {
+        font-size: 28px;
+    }
+
+    .choose-card {
+        padding: 22px 18px 24px;
+    }
+
+    .choose-card-icon {
+        margin-bottom: 30px;
+    }
+
+    .shuttle-title {
+        font-size: 26px;
+    }
+
+    .glance-card {
+        max-width: 400px;
+    }
+
+    .glance-number {
+        font-size: 26px;
+    }
+
+    .pricing-slider-wrap,
+    .pricing-slider-wrap .owl-dots {
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .pricing-slider-wrap {
+        padding-left: 15px;
+    }
+
+    .pricing-card-img img {
+        height: 200px;
+    }
+
+    .shuttle-service-title {
+        font-size: 28px;
+    }
+
+    .shuttle-service-logo .service-logo-primary,
+    .shuttle-service-logo .service-logo-secondary {
+        height: 130px;
+    }
+
+    /* .shuttle-service-logo .service-logo-secondary {
+        height: 80px;
+    } */
+
+    .marquee-text {
+        font-size: 21px;
+    }
+
+    .marquee-text::after {
+        font-size: 15px;
+        margin-left: 26px;
+    }
+
+    .inner-banner-title {
+        font-size: 35px;
+    }
+
+    .inner-banner::before {
+        width: 130px;
+        height: 130px;
+    }
+
+    .inner-banner::after {
+        width: 150px;
+        height: 150px;
+    }
+
+    .direction-info-card,
+    .contact-us-box {
+        padding: 28px 26px;
+    }
+
+    .direction-full-map iframe {
+        height: 450px;
+    }
+
+    .testimonial-slider-wrap,
+    .testimonial-slider-wrap .owl-dots {
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .testimonial-slider-wrap {
+        padding-left: 15px;
+    }
+
+    .faq-main-title {
+        font-size: 25px;
+    }
+
+    .about-heading {
+        font-size: 24px;
+    }
+
+    .about-intro-img img,
+    .mission-img img {
+        height: 350px;
+    }
+
+    .founder-img img {
+        height: 380px;
+    }
+
+    .offer-card-img img {
+        height: 145px;
+    }
+
+    .how-works-left {
+        padding-right: 10px;
+    }
+
+    .step-item {
+        padding: 18px 18px;
+        gap: 14px;
+    }
+
+    .how-steps::before {
+        left: 42px;
+    }
+}
+
+/* ========================= Max 991px ========================= */
+@media only screen and (max-width: 991px) {
+
+    .container {
+        max-width: 720px;
+    }
+
+    /* --- Mobile navigation --- */
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .navbar-collapse {
+        background-color: var(--white-color);
+        border-top: 1px solid rgba(16, 16, 16, 0.08);
+        margin-top: 12px;
+        padding: 10px 0 18px;
+    }
+
+    .main-menu {
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .main-menu .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(16, 16, 16, 0.06);
+    }
+
+    .main-menu .nav-link {
+        display: block;
+        padding: 12px 4px;
+    }
+
+    .main-menu .nav-link::after {
+        left: 4px;
+    }
+
+    .main-menu .nav-link:hover::after,
+    .main-menu .nav-link.active::after {
+        width: 24px;
+    }
+
+    .header-btn-wrap {
+        margin: 16px 0 0;
+    }
+
+    .header-btn-wrap .common-btn {
+        width: 100%;
+    }
+
+    /* --- Hero --- */
+    .hero-banner {
+        padding: 50px 0 60px;
+    }
+
+    .hero-banner::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.9) 65%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .hero-row {
+        min-height: auto;
+    }
+
+    .hero-left-col,
+    .hero-right-col {
+        width: 100%;
+    }
+
+    .hero-content {
+        margin-bottom: 42px;
+    }
+
+    .hero-form-wrapper {
+        max-width: 620px;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-info {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .contact-text {
+        max-width: 100%;
+    }
+
+    .contact-map iframe {
+        height: 360px;
+    }
+
+    /* Logo moves into the flow so it never overlaps the text */
+    .contact-abs-logo {
+        position: static;
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .site-footer {
+        padding-top: 60px;
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        margin-top: 50px;
+    }
+
+    .ready-park-section {
+        padding: 60px 0;
+    }
+
+    .ready-park-section .shape-top-left {
+        width: 115px;
+        height: 115px;
+    }
+
+    .ready-park-section .shape-bottom-right {
+        width: 130px;
+        height: 130px;
+    }
+
+    .ads-bnr-section {
+        min-height: 420px;
+        padding: 70px 0 60px;
+    }
+
+    .ads-bnr-title {
+        font-size: 26px;
+    }
+
+    .ads-bnr-logo img {
+        height: 115px;
+    }
+
+    .why-choose-section {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-main-title {
+        font-size: 25px;
+    }
+
+    .section-sub-title {
+        font-size: 18px;
+    }
+
+    .choose-card-icon {
+        margin-bottom: 22px;
+    }
+
+    /* Cards sit closer together on tablet, so drop the lift */
+    .choose-card:hover,
+    .choose-card.active {
+        transform: translateY(-4px);
+    }
+
+    .shuttle-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .shuttle-section::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+    }
+
+    .shuttle-title {
+        font-size: 30px;
+    }
+
+    .glance-card {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .pricing-section {
+        padding: 60px 0;
+    }
+
+    .pricing-heading {
+        margin-bottom: 6px !important;
+    }
+
+    .pricing-nav {
+        justify-content: center;
+    }
+
+    .pricing-slider-wrap {
+        margin-top: 30px;
+    }
+
+    .pricing-card-img img {
+        height: 300px;
+    }
+
+    .shuttle-service-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .shuttle-service-section::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 100%);
+    }
+
+    .shuttle-service-title {
+        font-size: 25px;
+    }
+
+    .shuttle-service-text {
+        max-width: 100%;
+    }
+
+    .common-btn.btn-book {
+        min-width: 240px;
+    }
+
+    .slider-ads-section {
+        padding: 14px 0;
+    }
+
+    .marquee-text {
+        font-size: 18px;
+    }
+
+    .marquee-text::after {
+        font-size: 13px;
+        margin-left: 22px;
+    }
+
+    .inner-banner {
+        min-height: 170px;
+    }
+
+    .inner-banner-title {
+        font-size: 30px;
+    }
+
+    .inner-banner::before {
+        width: 110px;
+        height: 110px;
+    }
+
+    .inner-banner::after {
+        width: 125px;
+        height: 125px;
+    }
+
+    .reserve-form-section {
+        padding: 60px 0;
+    }
+
+    .reserve-form-section .booking-form-box {
+        padding: 28px 24px;
+    }
+
+    .direction-contact-section {
+        padding-top: 55px;
+    }
+
+    .direction-info-card,
+    .contact-us-box {
+        padding: 26px 22px;
+    }
+
+    .contact-us-box .form-title {
+        font-size: 23px;
+        margin-bottom: 22px;
+    }
+
+    .direction-full-map {
+        margin-top: 55px;
+    }
+
+    .direction-full-map iframe {
+        height: 400px;
+    }
+
+    .testimonial-section {
+        padding: 45px 0 55px;
+    }
+
+    .testimonial-card {
+        padding: 20px 20px 16px;
+    }
+
+    .testimonial-author {
+        margin: 0 -20px -16px;
+    }
+
+    .faq-section {
+        padding: 55px 0 60px;
+    }
+
+    .faq-main-title {
+        font-size: 23px;
+        margin-bottom: 28px;
+    }
+
+    .faq-wrapper {
+        padding: 6px 22px;
+    }
+
+    .about-intro-section,
+    .founder-section,
+    .offer-section,
+    .how-works-section,
+    .mission-section {
+        padding: 55px 0;
+    }
+
+    .about-heading {
+        font-size: 22px;
+    }
+
+    /* Image first, text second reads better once stacked */
+    .founder-section .row>.col-lg-6:first-child,
+    .mission-section .row>.col-lg-6:first-child {
+        order: 2;
+    }
+
+    .founder-content,
+    .mission-content {
+        padding-left: 0;
+    }
+
+    .founder-img,
+    .mission-img {
+        max-width: 100%;
+    }
+
+    .about-intro-img img,
+    .founder-img img,
+    .mission-img img {
+        height: 320px;
+    }
+
+    .how-works-left {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .how-works-left p {
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .how-works-img img {
+        max-width: 340px;
+    }
+}
+
+/* ========================= Max 767px ========================= */
+@media only screen and (max-width: 767px) {
+
+    .container {
+        max-width: 540px;
+    }
+
+    .hero-banner {
+        padding: 40px 0 50px;
+    }
+
+    .hero-logo img {
+        height: 60px;
+    }
+
+    .hero-logo {
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+/*     .hero-title br {
+        display: none;
+    } */
+
+    .hero-text {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .hero-btn-group {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .hero-feature-list {
+        gap: 14px 18px;
+    }
+
+    .booking-form-box {
+        padding: 24px 18px;
+    }
+
+    .form-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .contact-map iframe {
+        height: 300px;
+    }
+
+    .address-card {
+        padding: 18px 20px;
+        margin-bottom: 24px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .footer-bottom .developer-text {
+        text-align: center;
+    }
+
+    .ready-park-section {
+        padding: 50px 0;
+    }
+
+    .ready-park-title {
+        font-size: 23px;
+    }
+
+    .ready-park-text {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .ready-park-btns {
+        gap: 12px;
+    }
+
+    .trust-list {
+        gap: 10px 20px;
+    }
+
+    .ads-bnr-section {
+        min-height: 360px;
+        padding: 60px 0 50px;
+    }
+
+    .ads-bnr-title {
+        font-size: 22px;
+    }
+
+    .ads-bnr-title br {
+        display: none;
+    }
+
+    .scroll-down-arrow {
+        width: 56px;
+        padding-bottom: 26px;
+    }
+
+    .scroll-down-arrow .arrow-stem {
+        width: 26px;
+        height: 26px;
+    }
+
+    .scroll-down-arrow .arrow-head {
+        border-left-width: 28px;
+        border-right-width: 28px;
+        border-top-width: 26px;
+    }
+
+    .why-choose-section {
+        padding: 50px 0;
+    }
+
+    .section-main-title {
+        font-size: 22px;
+    }
+
+    .section-sub-title {
+        font-size: 17px;
+    }
+
+    .section-desc {
+        font-size: 13px;
+    }
+
+    .choose-card {
+        padding: 20px 18px 22px;
+    }
+
+    .shuttle-section {
+        padding: 50px 0;
+    }
+
+    .shuttle-logo img {
+        height: 70px;
+    }
+
+    .shuttle-title {
+        font-size: 21px;
+    }
+
+    .shuttle-subtitle {
+        font-size: 14px;
+    }
+
+    .glance-card {
+        padding: 24px 20px 20px;
+    }
+
+    .glance-title {
+        font-size: 22px;
+    }
+
+    .pricing-section {
+        padding: 50px 0;
+    }
+
+    .pricing-card-img img {
+        height: auto;
+    }
+
+    .slider-arrow {
+        font-size: 18px;
+    }
+
+    .shuttle-service-section {
+        padding: 50px 0;
+    }
+
+    .shuttle-service-title {
+        font-size: 22px;
+    }
+
+    .shuttle-service-title br {
+        display: none;
+    }
+
+    .shuttle-service-text {
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+
+    .shuttle-service-logo {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .shuttle-service-logo .service-logo-primary {
+        height: 72px;
+    }
+
+    .shuttle-service-logo .service-logo-secondary {
+        height: 66px;
+    }
+
+    .slider-ads-section {
+        padding: 12px 0;
+    }
+
+    .marquee-text {
+        font-size: 15px;
+    }
+
+    .marquee-text::after {
+        font-size: 11px;
+        margin-left: 18px;
+    }
+
+    .inner-banner {
+        min-height: 150px;
+        padding: 25px 0;
+    }
+
+    .inner-banner-title {
+        font-size: 25px;
+    }
+
+    .inner-banner::before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .inner-banner::after {
+        width: 100px;
+        height: 100px;
+    }
+
+    .reserve-form-section {
+        padding: 50px 0;
+    }
+
+    .reserve-form-section .booking-form-box {
+        padding: 24px 18px;
+    }
+
+    .direction-contact-section {
+        padding-top: 45px;
+    }
+
+    .direction-info-card,
+    .contact-us-box {
+        padding: 24px 18px;
+    }
+
+    .contact-us-box .form-title {
+        font-size: 21px;
+    }
+
+    .contact-us-form textarea.form-control {
+        min-height: 110px;
+    }
+
+    .direction-full-map {
+        margin-top: 45px;
+    }
+
+    .direction-full-map iframe {
+        height: 330px;
+    }
+
+    .testimonial-section {
+        padding: 40px 0 50px;
+    }
+
+    .testimonial-text {
+        font-size: 12.5px;
+    }
+
+    .faq-section {
+        padding: 45px 0 50px;
+    }
+
+    .faq-main-title {
+        font-size: 21px;
+        margin-bottom: 24px;
+    }
+
+    .faq-wrapper {
+        padding: 4px 18px;
+    }
+
+    .faq-wrapper .accordion-button {
+        font-size: 14px;
+        padding: 17px 26px 17px 0;
+    }
+
+    .faq-wrapper .accordion-body {
+        padding-right: 26px;
+        padding-bottom: 17px;
+    }
+
+    .about-intro-section,
+    .founder-section,
+    .offer-section,
+    .how-works-section,
+    .mission-section {
+        padding: 45px 0;
+    }
+
+    .about-heading {
+        font-size: 20px;
+    }
+
+    .about-heading br {
+        display: none;
+    }
+
+    .about-intro-content p,
+    .founder-content p,
+    .mission-content p,
+    .how-works-left p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .about-intro-img img,
+    .founder-img img,
+    .mission-img img {
+        height: auto;
+    }
+
+    .about-intro-img,
+    .founder-img,
+    .mission-img {
+        border-radius: 12px;
+    }
+
+    .offer-card-img img {
+        height: auto;
+    }
+
+    .step-item {
+        padding: 16px 16px;
+    }
+
+    .how-steps::before {
+        left: 38px;
+        top: 34px;
+        bottom: 34px;
+    }
+}
+
+/* ========================= Max 575px ========================= */
+@media only screen and (max-width: 575px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .header-logo .logo-primary {
+        height: 42px;
+    }
+
+    .site-header.is-sticky .header-logo .logo-primary,
+    .site-header.is-sticky .header-logo .logo-secondary {
+        height: 55px;
+    }
+
+    .header-logo .logo-secondary {
+        height: 34px;
+    }
+
+    .hero-title {
+    	font-size: 28px;
+	}
+
+    .hero-badge {
+        font-size: 15px;
+        padding: 5px 13px;
+    }
+	.hero-feature-list {
+        justify-content: center;
+    }
+
+    .hero-btn-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero-btn-group .common-btn {
+        width: 100%;
+    }
+
+    .booking-form .btn-send {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .contact-map iframe {
+        height: 260px;
+    }
+
+    .contact-abs-logo img {
+        height: 80px;
+    }
+	.shuttle-logo img {
+        height: 80px;
+    }
+
+    .footer-logo {
+        gap: 8px;
+    }
+
+    .footer-logo .footer-logo-primary {
+        height: 80px;
+    }
+
+    .footer-logo .footer-logo-secondary {
+        height: 80px;
+    }
+
+    .footer-social a {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .ready-park-section .shape-top-left {
+        width: 65px;
+        height: 65px;
+    }
+
+    .ready-park-section .shape-bottom-right {
+        width: 65px;
+        height: 65px;
+    }
+
+    .ready-park-title {
+        font-size: 21px;
+    }
+
+    .ready-park-btns {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .ready-park-btns .common-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .trust-list li {
+        font-size: 12px;
+    }
+
+    .ads-bnr-section {
+        min-height: 320px;
+    }
+
+    .ads-bnr-title {
+        font-size: 20px;
+    }
+
+    .ads-bnr-logo img {
+        height: 95px;
+    }
+
+    .ads-bnr-logo {
+        margin-bottom: 20px;
+    }
+
+    .section-main-title {
+		font-size: 26px;
+	}
+
+    .choose-card-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .shuttle-title {
+		font-size: 26px;
+	}
+
+    .common-btn.btn-glass {
+        width: 100%;
+    }
+
+    .glance-title {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .glance-box {
+        padding: 16px 8px;
+    }
+
+    .glance-number {
+        font-size: 23px;
+    }
+
+    .glance-label {
+        font-size: 11px;
+    }
+
+    .pricing-card-img img {
+        height: 200px;
+    }
+
+    .pricing-card-info h4,
+    .pricing-rate {
+        font-size: 16px;
+    }
+
+    .shuttle-service-title {
+        font-size: 20px;
+    }
+
+    .shuttle-service-list h4 {
+        font-size: 14px;
+    }
+
+    .shuttle-service-list p {
+        font-size: 12px;
+    }
+
+    .common-btn.btn-book {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .shuttle-service-logo .service-logo-primary,
+    .shuttle-service-logo .service-logo-secondary {
+        height: 80px;
+    }
+
+    /* .shuttle-service-logo .service-logo-secondary {
+        height: 54px;
+    } */
+
+    .marquee-text {
+        font-size: 13px;
+    }
+
+    .marquee-text.text-hollow {
+        -webkit-text-stroke-width: 0.6px;
+    }
+
+    .marquee-text::after {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .pricing-slider.owl-carousel .owl-nav {
+        position: absolute;
+        top: auto;
+        right: 50%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        bottom: -40px;
+        transform: translateX(50%);
+    }
+
+    .inner-banner {
+        min-height: 130px;
+    }
+
+    .inner-banner-title {
+        font-size: 21px;
+    }
+
+    .inner-banner::before {
+        width: 70px;
+        height: 70px;
+    }
+
+    .inner-banner::after {
+        width: 80px;
+        height: 80px;
+    }
+
+    .direction-info-card,
+    .contact-us-box {
+        padding: 22px 16px;
+        border-radius: 12px;
+    }
+
+    .contact-us-form .btn-send {
+        width: 100%;
+    }
+
+    .direction-full-map iframe {
+        height: 280px;
+    }
+
+    .faq-main-title {
+        font-size: 19px;
+    }
+
+    .faq-wrapper {
+        padding: 4px 15px;
+        border-radius: 8px;
+    }
+
+    .faq-wrapper .accordion-button {
+        font-size: 13.5px;
+    }
+
+    .faq-wrapper .accordion-body {
+        font-size: 12.5px;
+    }
+
+    .btn-show-more {
+        width: 100%;
+    }
+
+    .about-heading {
+        font-size: 19px;
+    }
+
+/*     .about-intro-img img,
+    .founder-img img,
+    .mission-img img {
+        height: 240px;
+    } */
+
+/*     .offer-card-img img {
+        height: 160px;
+    } */
+
+    .step-icon {
+        width: 28px;
+        font-size: 19px;
+    }
+
+    .step-text h4 {
+        font-size: 14px;
+    }
+
+    .step-text p {
+        font-size: 12.5px;
+    }
+
+    /* Too tight to look right once the cards are narrow */
+    .how-steps::before {
+        display: none;
+    }
+
+    .step-item:hover {
+        transform: none;
+    }
+	.hero-logo img {
+        height: 80px;
+    }
+	.shuttle-logo, .shuttle-title, .shuttle-subtitle, .hero-logo, .hero-title, .hero-content {
+		text-align: center;
+	}
+}
+
+/* ========================= Max 479px ========================= */
+@media only screen and (max-width: 479px) {
+
+    .header-logo {
+        gap: 6px;
+        max-width: 72%;
+    }
+
+    .header-logo .logo-primary,
+    .header-logo .logo-secondary {
+        height: 60px;
+    }
+
+    /* .header-logo .logo-secondary {
+        height: 30px;
+    } */
+
+    .hero-feature-list li {
+        font-size: 12px;
+    }
+
+    .booking-form-box {
+        padding: 20px 15px;
+    }
+}
+
+/* ========================= Privacy Policy Page ========================= */
+@media only screen and (max-width: 1199px) {
+
+    .privacy-policy-section {
+        padding: 65px 0;
+    }
+
+    .privacy-overview-content h3 {
+        font-size: 26px;
+    }
+
+    .privacy-content-card {
+        padding: 30px 28px 6px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .privacy-policy-section {
+        padding: 55px 0;
+    }
+
+    .privacy-heading {
+        margin-bottom: 30px;
+    }
+
+    .privacy-overview-card {
+        padding: 30px 26px;
+        border-radius: 14px;
+    }
+
+    .privacy-contact-card {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .privacy-policy-section {
+        padding: 45px 0;
+    }
+
+    .privacy-shape-left {
+        width: 150px;
+        height: 150px;
+        left: -90px;
+    }
+
+    .privacy-shape-right {
+        width: 170px;
+        height: 170px;
+        right: -100px;
+    }
+
+    .privacy-overview-content h3 {
+        font-size: 22px;
+    }
+
+    .privacy-overview-content p {
+        font-size: 14px;
+    }
+
+    .privacy-content-card {
+        padding: 26px 22px 4px;
+        border-radius: 12px;
+    }
+
+    .privacy-policy-block {
+        padding-left: 20px;
+        margin-bottom: 22px;
+    }
+
+    .privacy-policy-block h3 {
+        font-size: 17px;
+    }
+
+    .privacy-policy-block p {
+        font-size: 13.5px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .privacy-overview-card {
+        padding: 24px 18px;
+    }
+
+    .privacy-meta-item {
+        padding: 14px;
+    }
+
+    .privacy-summary-card {
+        padding: 22px 18px;
+    }
+
+    .privacy-contact-card {
+        padding: 26px 20px;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+
+    .privacy-label {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+
+    .privacy-overview-content h3 {
+        font-size: 20px;
+    }
+
+    .privacy-meta-item i,
+    .privacy-summary-card i {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .privacy-summary-card h3 {
+        font-size: 16px;
+    }
+}
+
+/* ========================= Terms Condition Page ========================= */
+@media only screen and (max-width: 1199px) {
+
+    .terms-condition-section {
+        padding: 60px 0;
+    }
+
+    .terms-highlight-card h3 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .terms-condition-section {
+        padding: 55px 0;
+    }
+
+    .terms-heading {
+        margin-bottom: 28px;
+    }
+
+    .terms-highlight-card {
+        padding: 28px 26px;
+    }
+
+    .terms-contact-card {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .terms-condition-section {
+        padding: 45px 0;
+    }
+
+    .terms-shape-left {
+        width: 135px;
+        height: 135px;
+        left: -85px;
+    }
+
+    .terms-shape-right {
+        width: 150px;
+        height: 150px;
+        right: -85px;
+    }
+
+    .terms-highlight-card h3 {
+        font-size: 21px;
+    }
+
+    .terms-highlight-card p,
+    .terms-item p,
+    .terms-contact-card p {
+        font-size: 13.5px;
+    }
+
+    .terms-item {
+        padding: 18px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .terms-highlight-card {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+
+    .terms-item {
+        gap: 13px;
+        border-radius: 10px;
+    }
+
+    .terms-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .terms-contact-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+
+    .terms-label {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+
+    .terms-highlight-card h3 {
+        font-size: 19px;
+    }
+
+    .terms-item h3 {
+        font-size: 16px;
+    }
+}

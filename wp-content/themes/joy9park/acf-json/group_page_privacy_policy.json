@@ -1,0 +1,183 @@
+{
+    "key": "group_page_privacy_policy",
+    "title": "Page — Privacy Policy",
+    "fields": [
+        {
+            "key": "field_tab_privacy_overview",
+            "label": "Overview",
+            "name": "tab_privacy_overview",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_privacy_label",
+            "label": "Label",
+            "name": "privacy_label",
+            "type": "text",
+            "default_value": "Joy9 Park Privacy Policy"
+        },
+        {
+            "key": "field_privacy_heading",
+            "label": "Heading",
+            "name": "privacy_heading",
+            "type": "text",
+            "default_value": "Clear, simple and built around your trip."
+        },
+        {
+            "key": "field_privacy_intro_text",
+            "label": "Intro Text",
+            "name": "privacy_intro_text",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "We only ask for details that help us manage your parking reservation, communicate with you about shuttle service and improve your customer experience."
+        },
+        {
+            "key": "field_privacy_meta_items",
+            "label": "Meta Items",
+            "name": "privacy_meta_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_privacy_meta_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "choices": {
+                        "shield": "Shield",
+                        "phone": "Phone",
+                        "envelope": "Envelope",
+                        "clock": "Clock",
+                        "lock": "Lock",
+                        "location": "Location"
+                    },
+                    "default_value": "shield",
+                    "ui": 0
+                },
+                {
+                    "key": "field_privacy_meta_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_privacy_meta_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                }
+            ],
+            "default_value": [
+                { "icon": "shield", "title": "Protected Booking Details", "text": "Used to confirm and support your reservation." },
+                { "icon": "phone", "title": "Easy Contact", "text": "Reach us anytime at info@joy9park.com." }
+            ]
+        },
+
+        {
+            "key": "field_tab_privacy_content",
+            "label": "Policy Content",
+            "name": "tab_privacy_content",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_privacy_sections",
+            "label": "Policy Sections",
+            "name": "privacy_sections",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Section",
+            "sub_fields": [
+                {
+                    "key": "field_privacy_section_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_privacy_section_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ],
+            "default_value": [
+                { "heading": "1. Information We Collect", "text": "When you reserve a parking spot, call us, email us or submit a form, we may collect your name, phone number, email address, vehicle make or model, plate number, parking dates, flight details and any message you choose to provide." },
+                { "heading": "2. How We Use Your Information", "text": "We use your information to confirm reservations, support check-in and pickup, provide shuttle coordination, answer customer service requests, improve our website and keep accurate business records." },
+                { "heading": "3. Sharing Your Information", "text": "We do not sell your personal information. We may share limited information with trusted service providers when needed to operate the website, process communications or comply with legal obligations." },
+                { "heading": "4. Cookies And Website Data", "text": "Our website may use cookies or similar tools to understand basic site activity, improve performance and make your browsing experience smoother. You can control cookies through your browser settings." },
+                { "heading": "5. Data Security", "text": "We use reasonable administrative and technical measures to help protect your information. No online system is completely secure, but we work to keep customer data handled carefully and responsibly." },
+                { "heading": "6. Your Choices", "text": "You may contact us to request an update, correction or deletion of your personal information, subject to any records we are required to keep for business or legal reasons." },
+                { "heading": "7. Policy Updates", "text": "We may update this privacy policy from time to time. Any changes will be posted on this page so you can review how we handle your information." }
+            ]
+        },
+
+        {
+            "key": "field_tab_privacy_sidebar",
+            "label": "Sidebar",
+            "name": "tab_privacy_sidebar",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_privacy_sidebar_heading",
+            "label": "Heading",
+            "name": "privacy_sidebar_heading",
+            "type": "text",
+            "default_value": "Questions About Privacy?"
+        },
+        {
+            "key": "field_privacy_sidebar_text",
+            "label": "Text",
+            "name": "privacy_sidebar_text",
+            "type": "textarea",
+            "rows": 2,
+            "default_value": "Our team can help with privacy questions, reservation details or account information requests."
+        },
+        {
+            "key": "field_privacy_contact_email",
+            "label": "Contact Email",
+            "name": "privacy_contact_email",
+            "type": "email",
+            "default_value": "info@joy9park.com"
+        },
+        {
+            "key": "field_privacy_contact_phone",
+            "label": "Contact Phone (display)",
+            "name": "privacy_contact_phone",
+            "type": "text",
+            "default_value": "+1 (516) 849-3413"
+        },
+        {
+            "key": "field_privacy_sidebar_button_text",
+            "label": "Button Text",
+            "name": "privacy_sidebar_button_text",
+            "type": "text",
+            "instructions": "Links to whichever page uses the Reserve a Spot template.",
+            "default_value": "Reserve Your Spot"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/privacy-policy.php"
+            }
+        ]
+    ],
+    "menu_order": 15,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Privacy Policy overview, numbered sections and sidebar. Address uses Global Site Settings.",
+    "show_in_rest": 0
+}

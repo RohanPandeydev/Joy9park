@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Joy9 Park - Long term airport parking near JFK. 5 to 7 minutes to JFK terminals with free shuttle drop off and pickup, available 24/7.">
+    <title>Joy9 Park | Long Term Parking Near JFK</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ============================= HEADER START ============================= -->
+    <header class="site-header" id="siteHeader">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid px-0">
+
+                    <!-- Logo -->
+                    <a class="navbar-brand header-logo" href="index.html">
+                        <img src="./assets/logo1.png" alt="Joy9 Park" class="logo-primary">
+                        <img src="./assets/logo2.png" alt="Joy9 Park - Near JFK Long Term Parking"
+                            class="logo-secondary">
+                    </a>
+
+                    <!-- Mobile toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                    </button>
+
+                    <!-- Navigation -->
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 main-menu">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testimonial.html">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="direction.html">Directions</a>
+                            </li>
+                        </ul>
+                        <div class="header-btn-wrap">
+                            <a href="reserver-spot.html" class="common-btn">Reserve Your Spot</a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- ============================= HEADER END ============================= -->
+
+
+    <!-- ============================= HERO BANNER START ============================= -->
+    <section class="hero-banner" style="background-image: url('./assets/bnr-bg.jpg');">
+        <div class="container">
+            <div class="row align-items-center hero-row">
+
+                <!-- Left content -->
+                <div class="col-lg-6 col-xl-7 hero-left-col">
+                    <div class="hero-content">
+
+                        <div class="hero-logo" data-animate="fade-up">
+                            <img src="./assets/logo-white.png" alt="Joy9 Park - Near JFK Long Term Parking">
+                        </div>
+
+                        <div class="hero-badge" data-animate="fade-up" data-delay="100">
+                            <span class="badge-dot"></span>
+                            24/7 Available &nbsp;•&nbsp; 3 Miles from JFK
+                        </div>
+
+                        <h1 class="hero-title" data-animate="fade-up" data-delay="200">
+                            24-Hour Operation <br>
+                            5 to 7 Minutes to JFK Terminals <br>
+                            Free JFK Shuttle Drop Off and Pickup
+                        </h1>
+
+                        <p class="hero-text" data-animate="fade-up" data-delay="300">
+                            Pay cash or zelle at your arrival in the parking lot.
+                        </p>
+
+                        <div class="hero-btn-group" data-animate="fade-up" data-delay="400">
+                            <a href="tel:+15168493413" class="common-btn btn-call">
+                                <i class="fa-solid fa-phone"></i> Call (516) 849 - 3413
+                            </a>
+                            <a href="#directions" class="common-btn btn-white">Get Direction</a>
+                        </div>
+
+                        <ul class="hero-feature-list" data-animate="fade-up" data-delay="500">
+                            <li><i class="fa-solid fa-circle-check"></i> Secure Facility</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Free Shuttle</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 24/7 Access</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Right form -->
+                <div class="col-lg-6 col-xl-5 hero-right-col">
+                    <div class="hero-form-wrapper" id="booking-form" data-animate="fade-left">
+                        <div class="booking-form-box">
+                            <h2 class="form-title">Book Your Parking Slot</h2>
+
+                            <form action="#" method="post" class="booking-form" novalidate>
+                                <div class="row g-3">
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="first_name"
+                                            placeholder="Your First  Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="last_name"
+                                            placeholder="Your Last Name" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Email Address" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" name="phone" placeholder="Contact Number"
+                                            required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-icon-group">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <input type="text" class="form-control date-field" name="drop_off_date"
+                                                placeholder="Drop Off Date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-icon-group">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <input type="text" class="form-control date-field" name="pickup_date"
+                                                placeholder="Pickup Date" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <select class="form-select" name="car_model" required>
+                                            <option value="" selected disabled>Your Car Model</option>
+                                            <option value="sedan">Sedan</option>
+                                            <option value="suv">SUV</option>
+                                            <option value="hatchback">Hatchback</option>
+                                            <option value="minivan">Minivan</option>
+                                            <option value="pickup-truck">Pickup Truck</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="plate_number"
+                                            placeholder="Plate Number" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="flight_number"
+                                            placeholder="Flight Number (Optional)">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" min="1" class="form-control" name="no_of_people"
+                                            placeholder="No. Of People (Shuttle Services)">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea class="form-control" name="message" rows="4"
+                                            placeholder="Enter Your Message,"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="common-btn btn-white btn-send">Send Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================= HERO BANNER END ============================= -->
+
+    <!-- ============================= SLIDER ADS START ============================= -->
+    <section class="slider-ads-section" data-animate="fade-up">
+        <div class="owl-carousel owl-theme slider-ads">
+
+            <div class="item">
+                <span class="marquee-text">Our Services 100% Satisfation Guarantee</span>
+            </div>
+
+            <div class="item">
+                <span class="marquee-text text-hollow">Our Services 100% Satisfation Guarantee</span>
+            </div>
+
+            <div class="item">
+                <span class="marquee-text">Joy9 Park Free Shuttle Service</span>
+            </div>
+
+            <div class="item">
+                <span class="marquee-text text-hollow">Our Services 100% Satisfation Guarantee</span>
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================= SLIDER ADS END ============================= -->
+
+    <!-- ============================= WHY CHOOSE US START ============================= -->
+    <section class="why-choose-section" id="about">
+        <div class="container">
+
+            <!-- Section heading -->
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-xl-7">
+                    <div class="section-heading text-center">
+                        <span class="section-eyebrow" data-animate="fade-up">Why Choose Us</span>
+                        <h2 class="section-main-title" data-animate="fade-up" data-delay="100">
+                            Your Trusted JFK Parking Partner
+                        </h2>
+                        <h3 class="section-sub-title" data-animate="fade-up" data-delay="150">JOY9 PARK</h3>
+                        <p class="section-desc" data-animate="fade-up" data-delay="200">
+                            Experience hassle-free airport parking with our comprehensive services designed for
+                            travelers who value convenience, security, and affordability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="row gy-4">
+
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="choose-card active">
+                        <div class="choose-card-icon">
+                            <img src="./assets/wcu-icon1.png" alt="Easy Online Booking">
+                        </div>
+                        <div class="choose-card-body">
+                            <h4>Easy Online Booking</h4>
+                            <p>Reserve your parking space in just a few clicks with instant confirmation and a
+                                hassle-free booking process.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <img src="./assets/wcu-icon2.png" alt="Free Shuttle">
+                        </div>
+                        <div class="choose-card-body">
+                            <h4>Free Shuttle</h4>
+                            <p>Complimentary shuttle service to and from all JFK terminals 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <img src="./assets/wcu-icon3.png" alt="Secure Parking">
+                        </div>
+                        <div class="choose-card-body">
+                            <h4>Secure Parking</h4>
+                            <p>Barrier-controlled entry with 24/7 security monitoring for your peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="400">
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <img src="./assets/wcu-icon4.png" alt="3 Miles from JFK">
+                        </div>
+                        <div class="choose-card-body">
+                            <h4>3 Miles from JFK</h4>
+                            <p>Conveniently located just minutes from the airport for quick transfers.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================= WHY CHOOSE US END ============================= -->
+
+
+    <!-- ============================= SHUTTLE AT A GLANCE START ============================= -->
+    <section class="shuttle-section" style="background-image: url('./assets/shuttle-glance-bg.jpg');">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+
+                <!-- Left content -->
+                <div class="col-lg-6">
+                    <div class="shuttle-content">
+
+                        <div class="shuttle-logo" data-animate="fade-up">
+                            <img src="./assets/logo-white.png" alt="Joy9 Park - Near JFK Long Term Parking">
+                        </div>
+
+                        <h2 class="shuttle-title" data-animate="fade-up" data-delay="100">
+                            Free &nbsp;JFK Shuttle Drop Off and Pickup
+                        </h2>
+
+                        <p class="shuttle-subtitle" data-animate="fade-up" data-delay="200">
+                            7 Minutes &nbsp;to JFK Terminals
+                        </p>
+
+                        <a href="tel:+15168493413" class="common-btn btn-glass" data-animate="fade-up" data-delay="300">
+                            <i class="fa-solid fa-phone"></i> Call (516) 849 - 3413
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Right glance card -->
+                <div class="col-lg-6">
+                    <div class="glance-card" data-animate="fade-left">
+
+                        <h3 class="glance-title">Shuttle at a Glance</h3>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="glance-box">
+                                    <span class="glance-number">24/7</span>
+                                    <span class="glance-label">Operating Hours</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="glance-box">
+                                    <span class="glance-number">5&ndash;10</span>
+                                    <span class="glance-label">Min Wait Time</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="glance-box">
+                                    <span class="glance-number">6</span>
+                                    <span class="glance-label">Terminals Served</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="glance-box">
+                                    <span class="glance-number">3</span>
+                                    <span class="glance-label">Miles to JFK</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="glance-note">
+                            <i class="fa-solid fa-circle-check"></i> Complimentary for all customers
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================= SHUTTLE AT A GLANCE END ============================= -->
+
+    <!-- ============================= PRICING START ============================= -->
+    <section class="pricing-section" style="background-image: url('./assets/pricing-bg.png');" id="pricing">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+
+                <div class="col-lg-12">
+                    <div class="section-heading pricing-heading text-center mb-0">
+                        <span class="section-eyebrow" data-animate="fade-up">Transparent Pricing</span>
+                        <h2 class="section-main-title" data-animate="fade-up" data-delay="100">
+                            Affordable Rates, No Surprises
+                        </h2>
+                        <p class="section-desc" data-animate="fade-up" data-delay="150">
+                            Park smarter with secure airport parking at unbeatable daily rates. Our straightforward
+                            pricing means you know exactly what you'll pay.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-3">
+                    <div class="pricing-nav" data-animate="fade-left">
+                        <button type="button" class="slider-arrow prev-arrow" aria-label="Previous">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <button type="button" class="slider-arrow next-arrow" aria-label="Next">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+        <!-- Slider sits outside the container so the last card peeks at the edge -->
+        <div class="pricing-slider-wrap" data-animate="fade-up" data-delay="200">
+            <div class="owl-carousel owl-theme pricing-slider">
+
+                <div class="item">
+                    <div class="pricing-card">
+                        <div class="pricing-card-img">
+                            <img src="./assets/pricing-img1.jpg" alt="Sedan parking rate">
+                        </div>
+                        <div class="pricing-card-info">
+                            <h4>Sedan</h4>
+                            <span class="pricing-rate">$15 / Day</span>
+                        </div>
+                        <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pricing-card">
+                        <div class="pricing-card-img">
+                            <img src="./assets/pricing-img2.jpg" alt="Regular SUV parking rate">
+                        </div>
+                        <div class="pricing-card-info">
+                            <h4>Regular SUV</h4>
+                            <span class="pricing-rate">$17 / Day</span>
+                        </div>
+                        <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pricing-card">
+                        <div class="pricing-card-img">
+                            <img src="./assets/pricing-img3.jpg" alt="Large SUV parking rate">
+                        </div>
+                        <div class="pricing-card-info">
+                            <h4>Large SUV</h4>
+                            <span class="pricing-rate">$21 / Day</span>
+                        </div>
+                        <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pricing-card">
+                        <div class="pricing-card-img">
+                            <img src="./assets/pricing-img4.jpg" alt="Minivan parking rate">
+                        </div>
+                        <div class="pricing-card-info">
+                            <h4>Minivan</h4>
+                            <span class="pricing-rate">$21 / Day</span>
+                        </div>
+                        <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pricing-card">
+                        <div class="pricing-card-img">
+                            <img src="./assets/pricing-img2.jpg" alt="Pickup truck parking rate">
+                        </div>
+                        <div class="pricing-card-info">
+                            <h4>Pickup Truck</h4>
+                            <span class="pricing-rate">$23 / Day</span>
+                        </div>
+                        <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="pricing-card">
+                        <div class="pricing-card-img">
+                            <img src="./assets/pricing-img4.jpg" alt="Minivan parking rate">
+                        </div>
+                        <div class="pricing-card-info">
+                            <h4>Minivan</h4>
+                            <span class="pricing-rate">$21 / Day</span>
+                        </div>
+                        <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================= PRICING END ============================= -->
+
+
+    <!-- ============================= FREE SHUTTLE SERVICE START ============================= -->
+    <section class="shuttle-service-section" style="background-image: url('./assets/free-shuttle-bg.jpg');">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+
+                <!-- Left content -->
+                <div class="col-lg-6">
+                    <div class="shuttle-service-content">
+
+                        <span class="outline-badge" data-animate="fade-up">Free Shuttle Service</span>
+
+                        <h2 class="shuttle-service-title" data-animate="fade-up" data-delay="100">
+                            Ride to the Terminal <br> in Minutes
+                        </h2>
+
+                        <p class="shuttle-service-text" data-animate="fade-up" data-delay="150">
+                            Our complimentary shuttle service runs 24/7 between our secure lot and all JFK terminals.
+                            No waiting, no hassle&mdash;just hop on and we'll have you at your terminal in minutes.
+                        </p>
+
+                        <ul class="shuttle-service-list">
+                            <li data-animate="fade-up" data-delay="200">
+                                <i class="fa-solid fa-check"></i>
+                                <div class="list-text">
+                                    <h4>All JFK Terminals Covered</h4>
+                                    <p>We serve all 6 JFK terminals including T1, T2, T4, T5, T7 and T8</p>
+                                </div>
+                            </li>
+                            <li data-animate="fade-up" data-delay="250">
+                                <i class="fa-solid fa-check"></i>
+                                <div class="list-text">
+                                    <h4>24/7 Availability</h4>
+                                    <p>Early morning flight or late night arrival? We're always here</p>
+                                </div>
+                            </li>
+                            <li data-animate="fade-up" data-delay="300">
+                                <i class="fa-solid fa-check"></i>
+                                <div class="list-text">
+                                    <h4>Luggage Friendly</h4>
+                                    <p>Spacious vehicles accommodate all your luggage and travel gear</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="about.html" class="common-btn" data-animate="fade-up" data-delay="350">
+                            Learn More About Shuttle
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Right content -->
+                <div class="col-lg-6">
+                    <div class="shuttle-service-right text-center" data-animate="fade-left">
+
+                        <a href="index.html" class="shuttle-service-logo">
+                            <img src="./assets/free-shuttle-logo1.png" alt="Joy9 Park" class="service-logo-primary">
+                            <img src="./assets/free-shuttle-logo2.png" alt="Joy9 Park - Near JFK Long Term Parking"
+                                class="service-logo-secondary">
+                        </a>
+
+                        <a href="reserver-spot.html" class="common-btn btn-white btn-book">Book Now</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================= FREE SHUTTLE SERVICE END ============================= -->
+
+    <!-- ============================= READY TO PARK START ============================= -->
+    <section class="ready-park-section">
+
+        <!-- Decorative shapes -->
+        <span class="shape shape-top-left"></span>
+        <span class="shape shape-bottom-right"></span>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="ready-park-content text-center">
+
+                        <h2 class="ready-park-title" data-animate="fade-up">Ready to Park Stress-Free?</h2>
+
+                        <p class="ready-park-text" data-animate="fade-up" data-delay="100">
+                            Reserve your spot today and enjoy peace of mind knowing your car is secure while
+                            you're away. No credit card required to check availability.
+                        </p>
+
+                        <div class="ready-park-btns" data-animate="fade-up" data-delay="200">
+                            <a href="#booking-form" class="common-btn">Reserve Your Spot Now</a>
+                            <a href="tel:+15168493413" class="common-btn btn-outline">
+                                <i class="fa-solid fa-phone"></i> Call (516) 849 - 3413
+                            </a>
+                        </div>
+
+                        <ul class="trust-list" data-animate="fade-up" data-delay="300">
+                            <li><i class="fa-solid fa-shield-halved"></i> Secure Booking</li>
+                            <li><i class="fa-regular fa-clock"></i> 24/7 Support</li>
+                            <li><i class="fa-solid fa-rotate-left"></i> Free Cancellation</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================= READY TO PARK END ============================= -->
+
+
+    <!-- ============================= ADS BANNER START ============================= -->
+    <section class="ads-bnr-section" style="background-image: url('./assets/Banner-img.jpg');" id="ads-banner">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="ads-bnr-content text-center">
+
+                        <div class="ads-bnr-logo" data-animate="zoom-in">
+                            <img src="./assets/logo-white.png" alt="Joy9 Park - Near JFK Long Term Parking">
+                        </div>
+
+                        <h2 class="ads-bnr-title" data-animate="fade-up" data-delay="150">
+                            Your Satisfaction Proves <br> Our Credibility
+                        </h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================= ADS BANNER END ============================= -->
+
+    <!-- ============================= CONTACT SECTION START ============================= -->
+    <section class="contact-section" id="directions">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+
+                <!-- Left : Map -->
+                <div class="col-lg-7">
+                    <div class="contact-map" data-animate="fade-right">
+                        <iframe
+                            src="https://maps.google.com/maps?q=145-25%20155th%20Street%2C%20Jamaica%2C%20NY%2011434&t=m&z=14&ie=UTF8&iwloc=B&output=embed"
+                            title="Joy9 Park location map — 145-25 155th Street, Jamaica NY 11434" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right : Info content -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+
+                        <span class="section-eyebrow" data-animate="fade-up">Easy to Find</span>
+
+                        <h2 class="section-title" data-animate="fade-up" data-delay="100">
+                            Conveniently Located Near JFK
+                        </h2>
+
+                        <p class="contact-text" data-animate="fade-up" data-delay="150">
+                            Our facility is just 3 miles from JFK Airport, making it the perfect choice for
+                            travelers seeking quick and easy parking.
+                        </p>
+
+                        <div class="address-card" data-animate="fade-up" data-delay="200">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="address-card-text">
+                                <h3>Address</h3>
+                                <p>145-25 155TH STREET <br> JAMAICA NY &nbsp;11434</p>
+                            </div>
+                        </div>
+
+                        <ul class="direction-list">
+                            <li data-animate="fade-up" data-delay="250">
+                                <i class="fa-solid fa-check"></i>
+                                <div class="direction-text">
+                                    <h4>From Belt Parkway</h4>
+                                    <p>Exit at Springfield Blvd, head north to 155th Street</p>
+                                </div>
+                            </li>
+                            <li data-animate="fade-up" data-delay="300">
+                                <i class="fa-solid fa-check"></i>
+                                <div class="direction-text">
+                                    <h4>From Nassau Expressway</h4>
+                                    <p>Turn onto 155th Street, we're on the left</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Absolute logo -->
+        <div class="contact-abs-logo">
+            <img src="./assets/logo2.png" alt="Joy9 Park - Near JFK Long Term Parking">
+        </div>
+    </section>
+    <!-- ============================= CONTACT SECTION END ============================= -->
+
+
+    <!-- ============================= FOOTER START ============================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-5">
+
+                <!-- Column 1 : Logo + about -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget" data-animate="fade-up">
+                        <a href="index.html" class="footer-logo">
+                            <img src="./assets/logo1.png" alt="Joy9 Park" class="footer-logo-primary">
+                            <img src="./assets/footer-logo2.png" alt="Joy9 Park - Near JFK Long Term Parking"
+                                class="footer-logo-secondary">
+                        </a>
+
+                        <p class="footer-about">
+                            Your trusted JFK Airport parking partner. Secure, affordable, and convenient
+                            long-term parking with free shuttle service.
+                        </p>
+
+                        <ul class="footer-social">
+                            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 2 : Quick links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget" data-animate="fade-up" data-delay="100">
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="testimonial.html">Testimonials</a></li>
+                            <li><a href="direction.html">Directions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 3 : Legal -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="footer-widget" data-animate="fade-up" data-delay="200">
+                        <h3 class="footer-title">Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="privacy-policy.html">Privacy &amp; Policy</a></li>
+                            <li><a href="terms-condition.html">Terms &amp; Condition</a></li>
+                            <li><a href="testimonial.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 4 : Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget" data-animate="fade-up" data-delay="300">
+                        <h3 class="footer-title">Contact</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <span class="contact-label">Address</span>
+                                <p>145-25 155TH STREET JAMAICA <br> NY &nbsp;11434</p>
+                            </li>
+                            <li>
+                                <span class="contact-label">Email: <a
+                                        href="mailto:info@joy9park.com">info@joy9park.com</a></span>
+                            </li>
+                            <li>
+                                <span class="contact-label">Phone Number</span>
+                                <a href="tel:+15168493413">+1 (516) 849-3413</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center gy-2">
+                    <div class="col-md-6">
+                        <p class="copyright-text">Copyright &copy; <span id="currentYear">2026</span> &nbsp;Powered JOY
+                            9 PARK</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="developer-text">Design &amp; Developed by AS Designs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================= FOOTER END ============================= -->
+
+
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

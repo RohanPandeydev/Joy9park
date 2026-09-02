@@ -1,0 +1,73 @@
+{
+    "key": "group_global_settings",
+    "title": "Global Site Settings",
+    "fields": [
+        {
+            "key": "field_global_phone_button",
+            "label": "Phone Call Button",
+            "name": "global_phone_button",
+            "type": "link",
+            "instructions": "Used for every “Call…” button on the front page.",
+            "required": 1,
+            "return_format": "array",
+            "default_value": {
+                "title": "Call (516) 849 - 3413",
+                "url": "tel:+15168493413",
+                "target": ""
+            }
+        },
+        {
+            "key": "field_global_logo_white",
+            "label": "White Logo",
+            "name": "global_logo_white",
+            "type": "image",
+            "instructions": "White version of the logo used on dark backgrounds (hero, shuttle glance, ads banner).",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_global_logo_secondary",
+            "label": "Secondary Logo",
+            "name": "global_logo_secondary",
+            "type": "image",
+            "instructions": "Logo used as the absolute/floating logo in the Contact section.",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_global_address",
+            "label": "Address",
+            "name": "global_address",
+            "type": "textarea",
+            "rows": 2,
+            "new_lines": "br",
+            "default_value": "145-25 155TH STREET \nJAMAICA NY  11434"
+        },
+        {
+            "key": "field_global_map_embed_url",
+            "label": "Google Map Embed URL",
+            "name": "global_map_embed_url",
+            "type": "url",
+            "instructions": "The src URL used inside the Contact section map iframe.",
+            "default_value": "https://maps.google.com/maps?q=145-25%20155th%20Street%2C%20Jamaica%2C%20NY%2011434&t=m&z=14&ie=UTF8&iwloc=B&output=embed"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Site-wide values reused across the front page (phone button, logos, address, map).",
+    "show_in_rest": 0
+}

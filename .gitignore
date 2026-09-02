@@ -1,48 +1,52 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
-
-# Core
+# Joy9 Park — full standalone WordPress application repository
 #
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# Strategy: track the entire application (WordPress core, all plugins,
+# all themes, docs, and the static html/ reference) as one deployable
+# unit. Only environment-specific, generated, or local-tooling files
+# are ignored below.
 
-# Configuration
+# Environment-specific configuration
 wp-config.php
 
-# Example themes
-/wp-content/themes/twenty*/
+# Database dumps / backups
+/db/
+*.sql
+*.sql.gz
+*.sql.zip
 
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
+# User-uploaded media
 /wp-content/uploads/
+
+# Core auto-upgrade staging area
+/wp-content/upgrade/
+
+# Cache directories (any plugin/object cache under wp-content)
+/wp-content/cache/
+/wp-content/*-cache/
+
+# Debug log
+/wp-content/debug.log
+
+# WordPress maintenance-mode flag
+/.maintenance
+
+# Root .htaccess — environment-specific RewriteBase, not tracked for now
+/.htaccess
+
+# Dependency directories
+node_modules/
+vendor/
 
 # Log files
 *.log
 
-# htaccess
-/.htaccess
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# IDE-specific local files
+/.vscode/
+/.idea/
+*.sublime-project
+*.sublime-workspace
