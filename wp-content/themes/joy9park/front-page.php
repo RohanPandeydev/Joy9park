@@ -286,7 +286,7 @@ $logo_secondary = jp_img('global_logo_secondary', '/assets/logo2.png', 'option')
 <!-- ============================= SHUTTLE AT A GLANCE END ============================= -->
 
 <!-- ============================= PRICING START ============================= -->
-<section class="pricing-section" style="background-image: url('<?php echo esc_url(jp_img('pricing_bg_image', '/assets/pricing-bg.png')); ?>');" id="pricing">
+<section id="pricing" class="pricing-section" style="background-image: url('<?php echo esc_url(jp_img('pricing_bg_image', '/assets/pricing-bg.png')); ?>');">
     <div class="container">
         <div class="row align-items-center gy-3">
 

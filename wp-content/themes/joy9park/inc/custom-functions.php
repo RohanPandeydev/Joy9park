@@ -62,6 +62,79 @@ function jp_template_page_url( $template_filename, $fallback = '#' ) {
 
 
 /**
+ * Reads the front page's "pricing_cards" ACF repeater
+ * (group_front_page_content.json) into a flat [ 'Vehicle Type' => (float)
+ * rate ] map. Single source of truth for daily rates, consumed both by the
+ * server-side booking email calculation below and — via wp_localize_script
+ * in functions.php — by the live calculator in js/script.js, so editing a
+ * rate in wp-admin updates it everywhere without touching code.
+ */
+function jp_get_pricing_cards_rates() {
+	static $rates = null;
+
+	if ( null !== $rates ) {
+		return $rates;
+	}
+
+	$rates = array();
+
+	$front_page_id = (int) get_option( 'page_on_front' );
+
+	if ( $front_page_id && function_exists( 'have_rows' ) ) {
+		while ( have_rows( 'pricing_cards', $front_page_id ) ) {
+			the_row();
+
+			$vehicle_type = trim( get_sub_field( 'vehicle_type' ) );
+			$rate_text    = get_sub_field( 'rate' );
+
+			// "rate" is stored as free text, e.g. "$17 / Day" — pull the number out.
+			if ( '' === $vehicle_type || ! preg_match( '/[\d.]+/', $rate_text, $matches ) ) {
+				continue;
+			}
+
+			$rates[ $vehicle_type ] = (float) $matches[0];
+		}
+	}
+
+	// No editor has saved the Pricing tab in wp-admin yet (have_rows() found
+	// nothing) — mirror front-page.php's own $pricing_cards_default fallback
+	// so the rate map still matches what's actually on screen.
+	if ( empty( $rates ) ) {
+		$rates = array(
+			'Sedan'        => 15,
+			'Regular SUV'  => 17,
+			'Large SUV'    => 21,
+			'Minivan'      => 21,
+			'Pickup Truck' => 23,
+		);
+	}
+
+	return $rates;
+}
+
+/**
+ * Looks up a single vehicle's daily rate from jp_get_pricing_cards_rates().
+ * Falls back to $fallback when there's no matching row (e.g. ACF
+ * unavailable, or the form's car_model value doesn't exactly match a
+ * pricing card's vehicle type label).
+ */
+function jp_get_vehicle_daily_rate( $vehicle_type, $fallback = 17 ) {
+	$vehicle_type = trim( (string) $vehicle_type );
+
+	if ( '' === $vehicle_type ) {
+		return $fallback;
+	}
+
+	foreach ( jp_get_pricing_cards_rates() as $type => $rate ) {
+		if ( 0 === strcasecmp( $type, $vehicle_type ) ) {
+			return $rate;
+		}
+	}
+
+	return $fallback;
+}
+
+/**
  * Parking Booking Calculation for Contact Form 7
  */
 
@@ -150,7 +223,9 @@ function parking_booking_calculation($components, $contact_form)
 	// Pricing
 	// --------------------------------------------------
 
-	$daily_rate = 17;
+	$car_model = isset($posted_data['car_model']) ? $posted_data['car_model'] : '';
+
+	$daily_rate = jp_get_vehicle_daily_rate($car_model, 17);
 
 	$price = $days * $daily_rate;
 

@@ -189,6 +189,10 @@ function joy9park_scripts()
 	wp_enqueue_script('joy9park-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('joy9park-OwlCarousel2', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('joy9park-main', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true);
+	wp_localize_script('joy9park-main', 'joy9parkPricing', array(
+		'rates'       => function_exists('jp_get_pricing_cards_rates') ? jp_get_pricing_cards_rates() : array(),
+		'defaultRate' => 17,
+	));
 
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

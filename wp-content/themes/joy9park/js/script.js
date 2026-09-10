@@ -296,163 +296,208 @@ jQuery(".testimonial-slider").owlCarousel({
 function initDateFields() {
   var fields = document.querySelectorAll(".date-field");
 
-  fields.forEach(function (field) {
-    // ==========================================
-    // CALCULATE PARKING
-    // ==========================================
+  // ==========================================
+  // RATE LOOKUP (from ACF "pricing_cards", localized
+  // as window.joy9parkPricing — see functions.php)
+  // ==========================================
 
-    function calculateParking() {
-      var dropoffField = document.querySelector('input[name="drop_off_date"]');
+  function getSelectedDailyRate() {
+    var pricing = window.joy9parkPricing || {};
+    var rates = pricing.rates || {};
+    // wp_localize_script casts top-level scalars (like defaultRate) to
+    // strings, so coerce explicitly — a stray string here breaks
+    // RATE_PER_DAY.toFixed() below.
+    var fallbackRate = Number(pricing.defaultRate) || 17;
 
-      var pickupField = document.querySelector('input[name="pickup_date"]');
+    var carModelField = document.querySelector('select[name="car_model"]');
 
-      if (!dropoffField || !pickupField) {
-        return;
-      }
+    if (!carModelField || !carModelField.value) {
+      return fallbackRate;
+    }
 
-      // Both values are required
-      if (!dropoffField.value || !pickupField.value) {
-        return;
-      }
+    var selected = carModelField.value.trim().toLowerCase();
 
-      /*
-       * datetime-local returns:
-       * 2026-09-04T23:23
-       */
-
-      var dropoffDate = new Date(dropoffField.value);
-
-      var pickupDate = new Date(pickupField.value);
-
-      // Invalid dates
-      if (isNaN(dropoffDate.getTime()) || isNaN(pickupDate.getTime())) {
-        return;
-      }
-
-      // Pickup must be after Drop Off
-      if (pickupDate <= dropoffDate) {
-        alert("Pickup date must be after the Drop Off date.");
-
-        return;
-      }
-
-      // ==========================================
-      // PRICING SETTINGS
-      // ==========================================
-
-      var RATE_PER_DAY = 17;
-
-      var TAX_RATE = 10.36;
-
-      // ==========================================
-      // CALCULATE BILLABLE DAYS
-      // ==========================================
-
-      var difference = pickupDate.getTime() - dropoffDate.getTime();
-
-      var millisecondsPerDay = 1000 * 60 * 60 * 24;
-
-      // Round UP
-      var billableDays = Math.ceil(difference / millisecondsPerDay);
-
-      // Minimum 1 day
-      billableDays = Math.max(1, billableDays);
-
-      // ==========================================
-      // CALCULATE PRICE
-      // ==========================================
-
-      var price = billableDays * RATE_PER_DAY;
-
-      // ==========================================
-      // TAX
-      // ==========================================
-
-      var taxAmount = Number(((price * TAX_RATE) / 100).toFixed(2));
-
-      // ==========================================
-      // TOTAL
-      // ==========================================
-
-      var totalAmount = Number((price + taxAmount).toFixed(2));
-
-      // ==========================================
-      // UPDATE CF7 HIDDEN FIELDS
-      // ==========================================
-
-      var parkingDaysField = document.getElementById("parking-days");
-
-      var dailyRateField = document.getElementById("daily-rate");
-
-      var parkingPriceField = document.getElementById("parking-price");
-
-      var taxField = document.getElementById("tax");
-
-      var totalField = document.getElementById("total");
-
-      if (parkingDaysField) {
-        parkingDaysField.value = billableDays;
-      }
-
-      if (dailyRateField) {
-        dailyRateField.value = RATE_PER_DAY.toFixed(2);
-      }
-
-      if (parkingPriceField) {
-        parkingPriceField.value = price.toFixed(2);
-      }
-
-      if (taxField) {
-        taxField.value = taxAmount.toFixed(2);
-      }
-
-      if (totalField) {
-        totalField.value = totalAmount.toFixed(2);
-      }
-
-      // ==========================================
-      // UPDATE FRONTEND DISPLAY
-      // ==========================================
-
-      var calculationBox = document.getElementById("parking-calculation");
-
-      var displayDays = document.getElementById("display-days");
-
-      var displayRate = document.getElementById("display-rate");
-
-      var displayPrice = document.getElementById("display-price");
-
-      var displayTax = document.getElementById("display-tax");
-
-      var displayTotal = document.getElementById("display-total");
-
-      if (displayDays) {
-        displayDays.textContent =
-          billableDays + (billableDays === 1 ? " Day" : " Days");
-      }
-
-      if (displayRate) {
-        displayRate.textContent = RATE_PER_DAY.toFixed(2);
-      }
-
-      if (displayPrice) {
-        displayPrice.textContent = price.toFixed(2);
-      }
-
-      if (displayTax) {
-        displayTax.textContent = taxAmount.toFixed(2);
-      }
-
-      if (displayTotal) {
-        displayTotal.textContent = totalAmount.toFixed(2);
-      }
-
-      // Show calculation
-      if (calculationBox) {
-        calculationBox.style.display = "block";
+    for (var vehicleType in rates) {
+      if (
+        Object.prototype.hasOwnProperty.call(rates, vehicleType) &&
+        vehicleType.trim().toLowerCase() === selected
+      ) {
+        return Number(rates[vehicleType]) || fallbackRate;
       }
     }
 
+    return fallbackRate;
+  }
+
+  // ==========================================
+  // CALCULATE PARKING
+  // ==========================================
+
+  function calculateParking() {
+    var dropoffField = document.querySelector('input[name="drop_off_date"]');
+
+    var pickupField = document.querySelector('input[name="pickup_date"]');
+
+    if (!dropoffField || !pickupField) {
+      return;
+    }
+
+    // Both values are required
+    if (!dropoffField.value || !pickupField.value) {
+      return;
+    }
+
+    /*
+     * datetime-local returns:
+     * 2026-09-04T23:23
+     */
+
+    var dropoffDate = new Date(dropoffField.value);
+
+    var pickupDate = new Date(pickupField.value);
+
+    // Invalid dates
+    if (isNaN(dropoffDate.getTime()) || isNaN(pickupDate.getTime())) {
+      return;
+    }
+
+    // Pickup must be after Drop Off
+    if (pickupDate <= dropoffDate) {
+      alert("Pickup date must be after the Drop Off date.");
+
+      return;
+    }
+
+    // ==========================================
+    // PRICING SETTINGS
+    // ==========================================
+
+    var RATE_PER_DAY = getSelectedDailyRate();
+
+    var TAX_RATE = 10.36;
+
+    // ==========================================
+    // CALCULATE BILLABLE DAYS
+    // ==========================================
+
+    var difference = pickupDate.getTime() - dropoffDate.getTime();
+
+    var millisecondsPerDay = 1000 * 60 * 60 * 24;
+
+    // Round UP
+    var billableDays = Math.ceil(difference / millisecondsPerDay);
+
+    // Minimum 1 day
+    billableDays = Math.max(1, billableDays);
+
+    // ==========================================
+    // CALCULATE PRICE
+    // ==========================================
+
+    var price = billableDays * RATE_PER_DAY;
+
+    // ==========================================
+    // TAX
+    // ==========================================
+
+    var taxAmount = Number(((price * TAX_RATE) / 100).toFixed(2));
+
+    // ==========================================
+    // TOTAL
+    // ==========================================
+
+    var totalAmount = Number((price + taxAmount).toFixed(2));
+
+    // ==========================================
+    // UPDATE CF7 HIDDEN FIELDS
+    // ==========================================
+
+    var parkingDaysField = document.getElementById("parking-days");
+
+    var dailyRateField = document.getElementById("daily-rate");
+
+    var parkingPriceField = document.getElementById("parking-price");
+
+    var taxField = document.getElementById("tax");
+
+    var totalField = document.getElementById("total");
+
+    if (parkingDaysField) {
+      parkingDaysField.value = billableDays;
+    }
+
+    if (dailyRateField) {
+      dailyRateField.value = RATE_PER_DAY.toFixed(2);
+    }
+
+    if (parkingPriceField) {
+      parkingPriceField.value = price.toFixed(2);
+    }
+
+    if (taxField) {
+      taxField.value = taxAmount.toFixed(2);
+    }
+
+    if (totalField) {
+      totalField.value = totalAmount.toFixed(2);
+    }
+
+    // ==========================================
+    // UPDATE FRONTEND DISPLAY
+    // ==========================================
+
+    var calculationBox = document.getElementById("parking-calculation");
+
+    var displayDays = document.getElementById("display-days");
+
+    var displayRate = document.getElementById("display-rate");
+
+    var displayPrice = document.getElementById("display-price");
+
+    var displayTax = document.getElementById("display-tax");
+
+    var displayTotal = document.getElementById("display-total");
+
+    if (displayDays) {
+      displayDays.textContent =
+        billableDays + (billableDays === 1 ? " Day" : " Days");
+    }
+
+    if (displayRate) {
+      displayRate.textContent = RATE_PER_DAY.toFixed(2);
+    }
+
+    if (displayPrice) {
+      displayPrice.textContent = price.toFixed(2);
+    }
+
+    if (displayTax) {
+      displayTax.textContent = taxAmount.toFixed(2);
+    }
+
+    if (displayTotal) {
+      displayTotal.textContent = totalAmount.toFixed(2);
+    }
+
+    // Show calculation
+    if (calculationBox) {
+      calculationBox.style.display = "block";
+    }
+  }
+
+  // ==========================================
+  // RECALCULATE WHEN THE CAR MODEL CHANGES
+  // ==========================================
+
+  var carModelField = document.querySelector('select[name="car_model"]');
+
+  if (carModelField) {
+    carModelField.addEventListener("change", function () {
+      calculateParking();
+    });
+  }
+
+  fields.forEach(function (field) {
     // ==========================================
     // YOUR EXISTING DATE PICKER LOGIC
     // ==========================================
