@@ -17,8 +17,9 @@ define( 'DB_USER',     $env( 'DB_USER', 'wordpress' ) );
 define( 'DB_PASSWORD', $env( 'DB_PASSWORD', '' ) );
 define( 'DB_HOST',     $env( 'DB_HOST', 'localhost' ) . ( $env( 'DB_PORT' ) ? ':' . $env( 'DB_PORT' ) : '' ) );
 define( 'DB_CHARSET',  'utf8mb4' );
-// TiDB does not support utf8mb4_unicode_520_ci (WordPress' default pick) — pin a supported one.
-define( 'DB_COLLATE',  $env( 'DB_COLLATE', 'utf8mb4_unicode_ci' ) );
+// TiDB lacks utf8mb4_unicode_520_ci, and wpdb silently upgrades utf8mb4_unicode_ci to it
+// (class-wpdb.php determine_charset), so pin a collation wpdb leaves untouched.
+define( 'DB_COLLATE',  $env( 'DB_COLLATE', 'utf8mb4_0900_ai_ci' ) );
 
 // Managed MySQL providers (Aiven, TiDB, PlanetScale…) require TLS.
 if ( filter_var( $env( 'DB_SSL', 'false' ), FILTER_VALIDATE_BOOLEAN ) ) {
