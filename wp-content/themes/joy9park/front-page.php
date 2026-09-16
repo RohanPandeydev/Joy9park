@@ -15,6 +15,7 @@ $phone_button   = jp_field('global_phone_button', array('title' => 'Call (516) 8
 $logo_white     = jp_img('global_logo_white', '/assets/logo-white.png', 'option');
 $logo_secondary = jp_img('global_logo_secondary', '/assets/logo2.png', 'option');
 $reserve_url    = jp_template_page_url('page-templates/reserver-spot.php');
+$about_url      = jp_template_page_url('page-templates/about.php');
 
 ?>
 <!-- ============================= HERO BANNER START ============================= -->
@@ -421,7 +422,7 @@ $reserve_url    = jp_template_page_url('page-templates/reserver-spot.php');
                         ?>
                     </ul>
 
-                    <?php $fss_learn_more_btn = jp_field('fss_learn_more_btn', array('title' => 'Learn More About Shuttle', 'url' => 'about.html')); ?>
+                    <?php $fss_learn_more_btn = jp_field('fss_learn_more_btn', array('title' => 'Learn More About Shuttle', 'url' => $about_url)); ?>
                     <a href="<?php echo esc_url($fss_learn_more_btn['url']); ?>" class="common-btn" data-animate="fade-up" data-delay="350">
                         <?php echo esc_html($fss_learn_more_btn['title']); ?>
                     </a>
@@ -433,7 +434,7 @@ $reserve_url    = jp_template_page_url('page-templates/reserver-spot.php');
             <div class="col-lg-6">
                 <div class="shuttle-service-right text-center" data-animate="fade-left">
 
-                    <a href="<?php echo esc_url(jp_field('fss_logo_link', 'index.html')); ?>" class="shuttle-service-logo">
+                    <a href="<?php echo esc_url(jp_field('fss_logo_link', home_url('/'))); ?>" class="shuttle-service-logo">
                         <img src="<?php echo esc_url(jp_img('fss_logo_primary', '/assets/free-shuttle-logo1.png')); ?>" alt="Joy9 Park" class="service-logo-primary">
                         <img src="<?php echo esc_url(jp_img('fss_logo_secondary', '/assets/free-shuttle-logo2.png')); ?>" alt="Joy9 Park - Near JFK Long Term Parking" class="service-logo-secondary">
                     </a>
