@@ -54,3 +54,11 @@ WordPress. Point an external pinger at it every 5–10 minutes, e.g. **cron-job.
 (503) when the database is unreachable.
 
 Free tier allows 750 instance-hours/month, which covers one service running 24/7.
+
+## TiDB compatibility notes
+
+- `DB_COLLATE` must be `utf8mb4_0900_ai_ci` — TiDB lacks `utf8mb4_unicode_520_ci`, and WordPress
+  silently upgrades `utf8mb4_unicode_ci` to it.
+- `wp-content/mu-plugins/tidb-compat.php` rewrites `SQL_CALC_FOUND_ROWS` queries (TiDB only no-ops
+  them). Keep it as long as the DB is TiDB; harmless on real MySQL.
+- When importing a MySQL/MariaDB dump: `sed -i 's/utf8mb4_unicode_520_ci/utf8mb4_0900_ai_ci/g' dump.sql`.
