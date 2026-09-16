@@ -46,6 +46,19 @@ services:
         generateValue: true
       - key: NONCE_SALT
         generateValue: true
+      # --- Outgoing mail (see wp-content/mu-plugins/smtp-mail.php) ---
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: tls
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM_NAME
+        value: Joy9 Park
       # --- Misc ---
       - key: WP_ENVIRONMENT_TYPE
         value: production

@@ -62,3 +62,10 @@ Free tier allows 750 instance-hours/month, which covers one service running 24/7
 - `wp-content/mu-plugins/tidb-compat.php` rewrites `SQL_CALC_FOUND_ROWS` queries (TiDB only no-ops
   them). Keep it as long as the DB is TiDB; harmless on real MySQL.
 - When importing a MySQL/MariaDB dump: `sed -i 's/utf8mb4_unicode_520_ci/utf8mb4_0900_ai_ci/g' dump.sql`.
+
+## Outgoing email
+
+The container has no mailer, so `wp-content/mu-plugins/smtp-mail.php` sends `wp_mail()` over SMTP using
+`SMTP_HOST / SMTP_PORT / SMTP_SECURE / SMTP_USER / SMTP_PASS / SMTP_FROM_NAME` env vars on the Render
+service. For Gmail use an **App Password** (Google Account → Security → 2-Step Verification → App passwords).
+Contact Form 7 "From" must be the same address as `SMTP_USER`.
