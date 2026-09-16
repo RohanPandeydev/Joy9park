@@ -5,7 +5,8 @@ services:
     name: joy9park
     runtime: docker
     plan: free
-    region: oregon
+    region: singapore
+    repo: https://github.com/RohanPandeydev/Joy9park
     branch: master
     dockerfilePath: ./Dockerfile
     autoDeploy: true
