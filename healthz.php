@@ -25,4 +25,16 @@ if ( isset( $_GET['db'] ) ) {
 	@mysqli_close( $m );
 }
 
+// Outbound-connectivity probe (admin-only diagnostics for SMTP setup): /healthz.php?net=host:port,host:port
+if ( isset( $_GET['net'] ) && getenv( 'HEALTHZ_NET_PROBE' ) ) {
+	foreach ( explode( ',', $_GET['net'] ) as $hp ) {
+		[ $h, $p ] = array_pad( explode( ':', $hp ), 2, 25 );
+		$t = microtime( true );
+		$fp = @fsockopen( $h, (int) $p, $errno, $errstr, 8 );
+		$out['net'][ $hp ] = $fp ? 'open (' . round( ( microtime( true ) - $t ) * 1000 ) . 'ms)' : "closed: $errno $errstr";
+		if ( $fp ) { fclose( $fp ); }
+	}
+	$out['dns'] = gethostbynamel( 'smtp.gmail.com' );
+}
+
 echo json_encode( $out ), "\n";
