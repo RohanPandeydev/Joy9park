@@ -1,0 +1,51 @@
+# Render Blueprint — Joy9 Park WordPress (free-tier demo)
+# Dashboard → New → Blueprint → pick RohanPandeydev/Joy9park
+services:
+  - type: web
+    name: joy9park
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: master
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      # --- External MySQL (TiDB Serverless / Aiven / any MySQL 8) ---
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "4000"          # TiDB uses 4000; standard MySQL is 3306
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSL
+        value: "true"          # TiDB/Aiven require TLS
+      - key: DB_TABLE_PREFIX
+        value: wp_
+      # --- WordPress salts: Render generates these once ---
+      - key: AUTH_KEY
+        generateValue: true
+      - key: SECURE_AUTH_KEY
+        generateValue: true
+      - key: LOGGED_IN_KEY
+        generateValue: true
+      - key: NONCE_KEY
+        generateValue: true
+      - key: AUTH_SALT
+        generateValue: true
+      - key: SECURE_AUTH_SALT
+        generateValue: true
+      - key: LOGGED_IN_SALT
+        generateValue: true
+      - key: NONCE_SALT
+        generateValue: true
+      # --- Misc ---
+      - key: WP_ENVIRONMENT_TYPE
+        value: production
+      - key: WP_DEBUG
+        value: "false"
+      - key: WP_DISALLOW_FILE_MODS
+        value: "true"          # filesystem is ephemeral — install plugins via git, not wp-admin

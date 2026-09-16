@@ -1,0 +1,14 @@
+.git
+.gitignore
+CLAUDE.md
+html/
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+*.sql
+*.sql.gz
+*.log
+.DS_Store
+node_modules/
+.vscode/
+.idea/
