@@ -2,7 +2,6 @@
 .gitignore
 CLAUDE.md
 html/
-wp-content/uploads/
 wp-content/upgrade/
 wp-content/cache/
 *.sql
