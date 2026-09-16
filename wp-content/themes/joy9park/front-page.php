@@ -14,6 +14,7 @@ get_header();
 $phone_button   = jp_field('global_phone_button', array('title' => 'Call (516) 849 - 3413', 'url' => 'tel:+15168493413'), 'option');
 $logo_white     = jp_img('global_logo_white', '/assets/logo-white.png', 'option');
 $logo_secondary = jp_img('global_logo_secondary', '/assets/logo2.png', 'option');
+$reserve_url    = jp_template_page_url('page-templates/reserver-spot.php');
 
 ?>
 <!-- ============================= HERO BANNER START ============================= -->
@@ -333,7 +334,7 @@ $logo_secondary = jp_img('global_logo_secondary', '/assets/logo2.png', 'option')
                                 <h4><?php echo esc_html(get_sub_field('vehicle_type')); ?></h4>
                                 <span class="pricing-rate"><?php echo esc_html(get_sub_field('rate')); ?></span>
                             </div>
-                            <a href="<?php echo esc_url($button ? $button['url'] : 'reserver-spot.html'); ?>" class="common-btn btn-small"><?php echo esc_html($button ? $button['title'] : 'Reserve Now'); ?></a>
+                            <a href="<?php echo esc_url($button ? $button['url'] : $reserve_url); ?>" class="common-btn btn-small"><?php echo esc_html($button ? $button['title'] : 'Reserve Now'); ?></a>
                         </div>
                     </div>
                 <?php
@@ -350,7 +351,7 @@ $logo_secondary = jp_img('global_logo_secondary', '/assets/logo2.png', 'option')
                                 <h4><?php echo esc_html($card['vehicle_type']); ?></h4>
                                 <span class="pricing-rate"><?php echo esc_html($card['rate']); ?></span>
                             </div>
-                            <a href="reserver-spot.html" class="common-btn btn-small">Reserve Now</a>
+                            <a href="<?php echo esc_url($reserve_url); ?>" class="common-btn btn-small">Reserve Now</a>
                         </div>
                     </div>
             <?php
@@ -437,7 +438,7 @@ $logo_secondary = jp_img('global_logo_secondary', '/assets/logo2.png', 'option')
                         <img src="<?php echo esc_url(jp_img('fss_logo_secondary', '/assets/free-shuttle-logo2.png')); ?>" alt="Joy9 Park - Near JFK Long Term Parking" class="service-logo-secondary">
                     </a>
 
-                    <?php $fss_book_now_btn = jp_field('fss_book_now_btn', array('title' => 'Book Now', 'url' => 'reserver-spot.html')); ?>
+                    <?php $fss_book_now_btn = jp_field('fss_book_now_btn', array('title' => 'Book Now', 'url' => $reserve_url)); ?>
                     <a href="<?php echo esc_url($fss_book_now_btn['url']); ?>" class="common-btn btn-white btn-book"><?php echo esc_html($fss_book_now_btn['title']); ?></a>
 
                 </div>
