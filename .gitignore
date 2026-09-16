@@ -50,3 +50,6 @@ desktop.ini
 /.idea/
 *.sublime-project
 *.sublime-workspace
+
+# Plugins that ship their composer deps must keep them (vendor/ above is for local tooling only)
+!/wp-content/plugins/secure-custom-fields/vendor/
