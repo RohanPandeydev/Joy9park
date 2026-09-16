@@ -9,6 +9,7 @@ services:
     repo: https://github.com/RohanPandeydev/Joy9park
     branch: master
     dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz.php
     autoDeploy: true
     envVars:
       # --- External MySQL (TiDB Serverless / Aiven / any MySQL 8) ---

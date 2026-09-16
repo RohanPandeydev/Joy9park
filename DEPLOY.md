@@ -45,3 +45,12 @@ mysql --ssl-mode=REQUIRED -h $DB_HOST -P 4000 -u $DB_USER -p wordpress < dump.sq
 # then fix URLs (WP-CLI, or the Better Search Replace plugin committed to the repo):
 wp search-replace 'http://localhost/joy9park' 'https://joy9park.onrender.com' --all-tables
 ```
+
+## Keeping the free instance awake
+
+`GET https://joy9park.onrender.com/healthz.php` returns `200 {"status":"ok"}` without loading
+WordPress. Point an external pinger at it every 5–10 minutes, e.g. **cron-job.org**:
+*Create cronjob → URL above → every 10 minutes*. Add `?db=1` if you also want it to fail
+(503) when the database is unreachable.
+
+Free tier allows 750 instance-hours/month, which covers one service running 24/7.
