@@ -14,9 +14,9 @@ COPY docker/php.ini      /usr/local/etc/php/conf.d/wordpress.ini
 COPY docker/apache.conf  /etc/apache2/conf-available/wordpress.conf
 RUN a2enconf wordpress
 
-# Application code (wp-config.php is generated from env vars, see docker/wp-config.php)
+# Application code (wp-config.php is generated from env vars, see docker/wp-config.render.php)
 COPY --chown=www-data:www-data . /var/www/html
-RUN cp /var/www/html/docker/wp-config.php /var/www/html/wp-config.php \
+RUN cp /var/www/html/docker/wp-config.render.php /var/www/html/wp-config.php \
  && cp /var/www/html/docker/htaccess      /var/www/html/.htaccess \
  && mkdir -p /var/www/html/wp-content/uploads \
  && chown -R www-data:www-data /var/www/html/wp-content/uploads /var/www/html/.htaccess /var/www/html/wp-config.php

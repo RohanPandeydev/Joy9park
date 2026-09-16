@@ -2,7 +2,7 @@
 
 The site runs as a **Docker web service** (`Dockerfile` → PHP 8.3 + Apache) with an
 **external MySQL** database. `wp-config.php` is generated from environment variables
-(`docker/wp-config.php`), so nothing environment-specific is committed.
+(`docker/wp-config.render.php`), so nothing environment-specific is committed.
 
 ## 1. Database (free: TiDB Cloud Serverless)
 
