@@ -65,6 +65,12 @@ Free tier allows 750 instance-hours/month, which covers one service running 24/7
 
 ## Outgoing email
 
+**Render blocks outbound SMTP (25/465/587)** — verified with `/healthz.php?net=smtp.gmail.com:587` — so any
+SMTP plugin fails. `wp-content/mu-plugins/brevo-mail.php` sends `wp_mail()` over Brevo's HTTPS API instead:
+set `BREVO_API_KEY`, `BREVO_FROM` (a sender verified in Brevo) and `BREVO_FROM_NAME`. Free plan: 300/day.
+
+### SMTP variant (for non-Render hosts)
+
 The container has no mailer, so `wp-content/mu-plugins/smtp-mail.php` sends `wp_mail()` over SMTP using
 `SMTP_HOST / SMTP_PORT / SMTP_SECURE / SMTP_USER / SMTP_PASS / SMTP_FROM_NAME` env vars on the Render
 service. For Gmail use an **App Password** (Google Account → Security → 2-Step Verification → App passwords).

@@ -46,7 +46,14 @@ services:
         generateValue: true
       - key: NONCE_SALT
         generateValue: true
-      # --- Outgoing mail (see wp-content/mu-plugins/smtp-mail.php) ---
+      # --- Outgoing mail: Render blocks SMTP ports, so use Brevo's HTTPS API (mu-plugins/brevo-mail.php) ---
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_FROM
+        sync: false            # must be a verified sender in Brevo
+      - key: BREVO_FROM_NAME
+        value: Joy9 Park
+      # --- (SMTP fallback for hosts that allow outbound SMTP; unused on Render) ---
       - key: SMTP_HOST
         value: smtp.gmail.com
       - key: SMTP_PORT
