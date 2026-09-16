@@ -25,6 +25,8 @@ services:
         sync: false
       - key: DB_SSL
         value: "true"          # TiDB/Aiven require TLS
+      - key: DB_COLLATE
+        value: utf8mb4_unicode_ci   # TiDB lacks utf8mb4_unicode_520_ci
       - key: DB_TABLE_PREFIX
         value: wp_
       # --- WordPress salts: Render generates these once ---
